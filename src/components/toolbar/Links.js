@@ -13,7 +13,7 @@ function Links() {
             </NavLink>
             <p> {'\u2191'} Preview {'\u2191'}</p>
             <NavLink
-                to="Contact"
+                to="contact"
             >
                 Contact
             </NavLink>
