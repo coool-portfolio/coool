@@ -1,0 +1,31 @@
+.header {
+    width: 65%;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main {
+    margin: 30px;
+}
+
+.button {
+    border: solid 2px;
+    font-size: 20px;
+    height: 45px;
+}
+
+.form {
+    margin-left: 40px;
+} 
+
+.input, .textarea {
+    margin: 6px 0 6px 0;
+    background-color: hsl(0, 0%, 96%)
+}
+
+button {
+    margin: 10px 0 10px 0;
+}
