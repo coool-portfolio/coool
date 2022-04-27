@@ -4,7 +4,7 @@ import IndexCard from "../components/index/IndexCard";
 function Index() {
 	return (
 		<div>
-			<IndexCard client='K-Swiss' project='Hideout' year='2021' />
+			<IndexCard client='Client' project='Project' year='Year' />
 		</div>
 	);
 }
