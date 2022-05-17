@@ -1,11 +1,70 @@
+.cardContainer {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	border-bottom: 2px solid black;
+}
+
+.project {
+	padding: 6px 0 0 18px;
+	margin-bottom: 50px;
+}
+
 h2 {
-	padding: 6px 0 0 10px;
+	font-size: 35px;
+	font-weight: 500;
+	color: black;
 }
 
 h5 {
-	padding: 6px 0 0 10px;
+	font-size: 20px;
+	color: rgb(116, 116, 116);
 }
 
-p {
-	padding: unset;
+.info {
+	margin-bottom: 50px;
+}
+
+.info p {
+	padding: 6px 0 0 18px;
+	font-size: 15px;
+	line-height: 1.1em;
+	color: rgb(116, 116, 116);
+}
+
+figure {
+	background-position: center;
+	background-size: cover;
+	margin: 0;
+	height: auto;
+}
+
+/* XL */
+@media only screen and (max-width: 1280px) {
+ 
+}
+
+/* LG */
+@media only screen and (max-width: 1024px) {
+	
+}
+
+/* MD/SM */
+@media only screen and (max-width: 768px) {
+    .cardContainer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+	}
+
+	.project {
+		padding: 6px 0 0 18px;
+		margin-bottom: 0px;
+	}
+
+	.info {
+		margin-bottom: 10px;
+	}
 }
