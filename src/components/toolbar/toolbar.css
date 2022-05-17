@@ -1,19 +1,21 @@
 .toolbar {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .coool {
     display: block;
     font-weight: 400;
-    font-size: 96px;
+    font-size: 120px;
     width: 100%;
     margin: 0;
-    padding: 0 20px 0 20px;
+    padding: 0 20px 0 30px;
+    line-height: 1.4em;
 }
 
 hr {
-    border-top: 3px solid black;
+    border-top: 2px solid black;
     margin: 0;
     width: 100%;
 }
@@ -27,9 +29,9 @@ hr {
 
 a,
 p {
-    font-size: 24px;
+    font-size: 30px;
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 30px;
     text-decoration: none;
     color: black;
 }
@@ -40,4 +42,37 @@ p {
 
 .links a:focus {
     color: gray;
+}
+
+/* XL */
+@media only screen and (max-width: 1280px) {
+ 
+}
+
+/* LG */
+@media only screen and (max-width: 1024px) {
+   
+}
+
+/* MD/SM */
+@media only screen and (max-width: 768px) {
+    .coool {
+        font-size: 100px;
+        margin: 0;
+        padding: 0px 10px 0px 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    a,
+    p {
+        font-size: 25px;
+    }
 }

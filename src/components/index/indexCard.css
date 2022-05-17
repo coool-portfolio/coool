@@ -1,3 +1,27 @@
-.card {
-	margin: 15px;
+.index {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0;
+	border-top: 2px solid black;
+}
+
+/* XL */
+@media only screen and (max-width: 1280px) {
+ 
+}
+
+/* LG */
+@media only screen and (max-width: 1024px) {
+   
+}
+
+/* MD/SM */
+@media only screen and (max-width: 768px) {
+    /* .index {
+		display: flex;
+		flex-direction: column;
+	} */
 }
