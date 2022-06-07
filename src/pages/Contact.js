@@ -147,7 +147,7 @@ function Contact() {
 						<button
 							type="submit"
 							onClick={sendEmail}
-							className="button is-large"
+							className="button"
 						>
 							Submit
 						</button>
