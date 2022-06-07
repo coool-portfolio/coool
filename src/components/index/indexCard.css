@@ -3,6 +3,7 @@
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-between;
+	font-family: gtpressura;
 	width: 100%;
 	margin: 0;
 	border-top: 2px solid black;

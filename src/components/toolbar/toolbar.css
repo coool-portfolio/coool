@@ -6,11 +6,13 @@
 
 .coool {
     display: block;
-    font-weight: 400;
-    font-size: 120px;
+    font-family: avantregular;
+    text-shadow: 0px 1px, 1px 0px, 1px 0px;
+    font-weight: 900;
+    font-size: 100px;
     width: 100%;
     margin: 0;
-    padding: 0 20px 0 30px;
+    padding: 0 30px 0 30px;
     line-height: 1.4em;
 }
 
@@ -21,6 +23,8 @@ hr {
 }
 
 .links {
+    font-family: gtpressura;
+    font-weight: 500;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -31,7 +35,7 @@ a,
 p {
     font-size: 30px;
     margin: 0;
-    padding: 10px 30px;
+    padding: 20px 30px;
     text-decoration: none;
     color: black;
 }
@@ -57,7 +61,7 @@ p {
 /* MD/SM */
 @media only screen and (max-width: 768px) {
     .coool {
-        font-size: 100px;
+        font-size: 80px;
         margin: 0;
         padding: 0px 10px 0px 10px;
         width: 100%;
