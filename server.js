@@ -1,5 +1,5 @@
 const express = require("express");
-//const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const path = require("path");
 
 const PORT = process.env.PORT || 3001;
@@ -13,9 +13,12 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to the Mongo DB
-// mongoose.connect(
-// 	process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
-// );
+mongoose.connect(
+	process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
+);
+
+// Use apiRoutes
+app.use("/api", apiRoutes);
 
 app.listen(PORT, function () {
 	console.log(`🌎 ==> API server now on port ${PORT}!`);
