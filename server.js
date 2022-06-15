@@ -14,11 +14,11 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to the Mongo DB
 mongoose.connect(
-	process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
+	process.env.MONGODB_URI || "mongodb://localhost/cooolprojects"
 );
 
 // Use apiRoutes
-app.use("/api", apiRoutes);
+// app.use("/api", apiRoutes);
 
 app.listen(PORT, function () {
 	console.log(`🌎 ==> API server now on port ${PORT}!`);
