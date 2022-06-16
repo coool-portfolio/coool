@@ -1,11 +1,11 @@
 import React from "react";
+import "./landing.css";
 // import { start } from "../csv-parser/csv-read";
 
 export default function Landing() {
 	return (
-		<div>
-			Landing <br />
-			<button>Test CSV Parse</button>
-		</div>
+		<footer>
+			COOOL is a joint directing project between Jake Nokovic and John Tereick.
+		</footer>
 	);
 }

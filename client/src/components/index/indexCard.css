@@ -7,6 +7,7 @@
 	width: 100%;
 	margin: 0;
 	border-top: 2px solid black;
+	margin-top: 90px;
 }
 
 /* XL */
@@ -21,8 +22,7 @@
 
 /* MD/SM */
 @media only screen and (max-width: 768px) {
-    /* .index {
-		display: flex;
-		flex-direction: column;
-	} */
+    .index {
+		margin-top: 75px;
+	}
 }
