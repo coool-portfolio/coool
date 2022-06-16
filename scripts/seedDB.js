@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
 const db = require("../models");
+const { insertMany } = require("../models/project");
 
 mongoose.connect(
-	process.env.MONGODB_URI || "mongodb://localhost/cooolprojects"
+	process.env.MONGODB_URI || "mongodb://localhost/cooolprojects",
+	{ useNewURLParser: true }
 );
 
 const projectSeed = [
@@ -408,3 +410,14 @@ const projectSeed = [
 	// 	notes: "",
 	// },
 ];
+
+db.Project.remove({})
+	.then(() => db.Project.collection.insertMany(projectSeed))
+	.then((data) => {
+		console.log(data.result + " records inserted");
+		process.exit(0);
+	})
+	.catch((err) => {
+		console.error(err);
+		process.exit(1);
+	});
