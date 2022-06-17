@@ -59,8 +59,8 @@ function Contact() {
 	};
 
 	return (
-		<div className="container columns">
-			<div className="column is-two-fifths is-mobile">
+		<div className="container columns contact-page">
+			<div className="column is-two-fifths">
 				<figure className="image">
 					<img
 						className=""
@@ -69,7 +69,7 @@ function Contact() {
 				</figure>
 			</div>
 
-			<div className="form column is-three-fifths is-mobile">
+			<div className="form column is-three-fifths">
 				<h2 className="title is-2 header">For project inquires, please use the contact form below.</h2>
 
 				{/* NAME */}
@@ -132,7 +132,7 @@ function Contact() {
 				</div>
 
 				{/* ALERT */}
-				{alert && <div className="notification is-success is-light">
+				{alert && <div className="notification is-success is-light alert">
 					<button
 						type="button"
 						onClick={(event) => setAlert(false, event.target.value)}

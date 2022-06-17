@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 
 function Links({ preview, setPreview, setLocation }) {
     const [delay, setDelay] = useState(false);
-    // const [preview, setPreview] = useState(true);
 
     useEffect(() => {
         // if page reload
@@ -17,7 +16,7 @@ function Links({ preview, setPreview, setLocation }) {
         setTimeout(() => {
             setDelay(true)
         }, 1000)
-    }, []);
+    }, [setPreview]);
 
     function removePreviewIndex() {
         setLocation('/index')
@@ -34,7 +33,8 @@ function Links({ preview, setPreview, setLocation }) {
             <NavLink
                 to="index"
                 onClick={removePreviewIndex}
-                className="toolbar-links"
+                className={window.location.pathname === '/index' ? "current-link" : "toolbar-links"}
+                // className="toolbar-links"
             >
                 Index
             </NavLink>
@@ -50,7 +50,7 @@ function Links({ preview, setPreview, setLocation }) {
             <NavLink
                 onClick={removePreviewContact}
                 to="contact"
-                className="toolbar-links"
+                className={window.location.pathname === '/contact' ? "current-link" : "toolbar-links"}
             >
                 Contact
             </NavLink>
