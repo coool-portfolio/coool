@@ -34,13 +34,20 @@ function Toolbar({ location, setLocation }) {
 	const [left, setLeft] = useState(false);
 	const [showAnimation, setShowAnimation] = useState(true);
 	const [preview, setPreview] = useState(true);
+	// const [reload, setReload] = useState(false);
 
 	// watches the size of window
 	useEffect(() => {
 		window.addEventListener('resize', handleWidth)
 
+		// if (reload === true) {
+		// 	window.location.reload()
+		// }
+	});
+
+	useEffect(() => {
 		// on location change
-		if (location === '/') {
+		if (window.location.pathname === '/') {
 			setShowAnimation(true)
 		} else {
 			setShowAnimation(false)
@@ -56,7 +63,7 @@ function Toolbar({ location, setLocation }) {
 		// removes original 3 OOO's
 		setTimeout(() => {
 			setVisible(false)
-		}, 1000)
+		}, 750)
 	}, []);
 
 	// sets arrows true or false depending on the width
@@ -98,6 +105,18 @@ function Toolbar({ location, setLocation }) {
 		}
 	}
 
+	// O nav
+	const handleChange = (event) => {
+		const { id, title } = event.target;
+		// console.log(title)
+
+		// setCurrent({
+		//     ...current,
+		//     title: title,
+		//     id: id,
+		// });
+	};
+
 	return (
 		<div className="toolbar">
 			<div className="load-text coool">
@@ -113,35 +132,39 @@ function Toolbar({ location, setLocation }) {
 						</svg>
 					}
 				</button>
+				
 				{/* COOOL ANIMATION */}
-				{showAnimation
-					? <>
-						<div>C</div>
-						{visible
-							? <div>OOO</div>
-							: <div className="loading-text">
-								{nav.map((o, i) => (
-									<div
-										key={i}
-										id={o.link}
-										title={o.title}
-										className="each-o"
-									>
-										{o.letter}
-									</div>
-								))}
-							</div>
-						}
-						<div>L</div>
-					</>
-					: <Link to="/" className="coool" onClick={() => {
-						setPreview(true)
-						setLocation('/')
-						handleWidth()
-					}}>
-						<div>COOOL</div>
-					</Link>
-				}
+					{showAnimation
+						? <>
+							<div>C</div>
+							{visible
+								? <div>OOO</div>
+								: <div className="loading-text">
+									{nav.map((o, i) => (
+										<div
+											onMouseEnter={handleChange}
+											key={i}
+											id={o.link}
+											title={o.title}
+											className="each-o"
+										>
+											{o.letter}
+										</div>
+									))}
+								</div>
+							}
+							<div>L</div>
+						</>
+						: <Link to="/" className="no-animation-coool" onClick={() => {
+							setPreview(true)
+							setLocation('/')
+							handleWidth()
+							// setReload(true)
+						}}>
+							<div>COOOL</div>
+						</Link>
+					}
+
 				{/* RIGHT ARROW */}
 				<button
 					onMouseEnter={rightScroll}

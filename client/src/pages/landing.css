@@ -3,20 +3,22 @@ footer {
     display: flex;
     justify-content: center;
     font-weight: 600;
-    font-size: 23px;
+    font-size: 22px;
     width: 100vw;
     height: 75px;
     position: absolute;
     bottom: 0;
+    padding: 0 50px;
     letter-spacing: 0.1rem;
+    color: black;
 }
 
 /* MD/SM */
 @media only screen and (max-width: 1024px) {
     footer {
-        /* text-align: center; */
-        font-size: 15px;
-        height: 100px;
+        font-size: 18px;
+        height: 80px;
         padding: 0 20px;
+        margin-bottom: 20px;
     }
 }
