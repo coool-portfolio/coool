@@ -3,13 +3,15 @@ import "./toolbar.css";
 
 import { NavLink } from 'react-router-dom'
 
-function Links({ preview, setPreview, current, setCurrent }) {
+function Links({ preview, setPreview, current, setCurrent, location, setLocation }) {
     const [delay, setDelay] = useState(false);
 
     useEffect(() => {
         // if page reload
-        if (document.location.pathname !== "/") {
+        if (window.location.pathname === "/" || location === "/") {
             setPreview(true)
+        } else {
+            setPreview(false)
         }
 
         // delayed preview fade in
@@ -20,36 +22,42 @@ function Links({ preview, setPreview, current, setCurrent }) {
 
     // links appear after a beat
     useEffect(() => {
-        // making the index and contact links disappear and reappear
-        let index = document.getElementById("index")
-        index.style.display = "none"
-        let contact = document.getElementById("contact")
-        contact.style.display = "none"
-        setTimeout(() => {
-            index.style.display = "flex"
-            contact.style.display = "flex"
-            center.style.justifyContent = "space-between"
-        }, 2700)
-
-        // adjusting "Preview" centering when links are added
-        let center = document.querySelector(".links")
-        center.style.justifyContent = "center"
-        setTimeout(() => {
-            let prevContainer = document.getElementById("prev")
-            prevContainer.style.marginRight = "32.5px"
-        }, 1000)
-        setTimeout(() => {
-            let prevContainer = document.getElementById("prev")
-            prevContainer.style.marginRight = "0"
-        }, 2700)
+        if (window.location.pathname === '/') {
+            // making the index and contact links disappear and reappear
+            let index = document.getElementById("index")
+            index.style.display = "none"
+            let contact = document.getElementById("contact")
+            contact.style.display = "none"
+            setTimeout(() => {
+                index.style.display = "flex"
+                contact.style.display = "flex"
+                center.style.justifyContent = "space-between"
+            }, 2700)
+    
+            // adjusting "Preview" centering when links are added
+            let center = document.querySelector(".links")
+            center.style.justifyContent = "center"
+            setTimeout(() => {
+                let prevContainer = document.getElementById("prev")
+                prevContainer.style.marginRight = "32.5px"
+            }, 1000)
+            setTimeout(() => {
+                let prevContainer = document.getElementById("prev")
+                prevContainer.style.marginRight = "0"
+            }, 2700)
+        } else {
+            document.querySelector(".links").style.justifyContent = "space-between"
+        }
     }, [])
-
+ 
     // removes landing "Preview" if not on landing
     function removePreviewIndex() {
+        setLocation('/index')
         setPreview(false)
         setCurrent(null)
     }
     function removePreviewContact() {
+        setLocation('/contact')
         setPreview(false)
         setCurrent(null)
     }
@@ -62,7 +70,7 @@ function Links({ preview, setPreview, current, setCurrent }) {
                     to="index"
                     id="index"
                     onClick={removePreviewIndex}
-                    className={window.location.pathname === '/index' ? "current-link" : "toolbar-links"}
+                    className={location === '/index' ? "current-link" : "toolbar-links"}
                 >
                     Index
                 </NavLink>
@@ -84,10 +92,10 @@ function Links({ preview, setPreview, current, setCurrent }) {
                 }
                 {/* CONTACT */}
                 <NavLink
-                    onClick={removePreviewContact}
                     to="contact"
                     id="contact"
-                    className={window.location.pathname === '/contact' ? "current-link" : "toolbar-links"}
+                    onClick={removePreviewContact}
+                    className={location === '/contact' ? "current-link" : "toolbar-links"}
                 >
                     Contact
                 </NavLink>

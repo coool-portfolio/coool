@@ -36,6 +36,7 @@ function Toolbar({ current, setCurrent, setLoading }) {
 	const [showAnimation, setShowAnimation] = useState(true);
 	const [preview, setPreview] = useState(true);
 	const [change, setChange] = useState("");
+	const [location, setLocation] = useState(window.location.pathname);
 
 	// watches the size of window
 	useEffect(() => {
@@ -44,7 +45,7 @@ function Toolbar({ current, setCurrent, setLoading }) {
 
 	useEffect(() => {
 		// on location change
-		if (window.location.pathname === '/') {
+		if (location === '/') {
 			setShowAnimation(true)
 		} else {
 			setShowAnimation(false)
@@ -95,7 +96,7 @@ function Toolbar({ current, setCurrent, setLoading }) {
 				setRight(false)
 			}
 		} else {
-			if (scrollEl.scrollLeft >= 100) {
+			if (scrollEl.scrollLeft >= 95) {
 				setRight(false)
 			}
 		}
@@ -143,7 +144,6 @@ function Toolbar({ current, setCurrent, setLoading }) {
 	return (
 		<div className="toolbar">
 			<div className="load-text coool">
-
 				{/* COOOL ANIMATION */}
 				{showAnimation
 					? <>
@@ -183,7 +183,6 @@ function Toolbar({ current, setCurrent, setLoading }) {
 							</div>
 
 						</div>
-
 						{/* COOOL ANIMATION */}
 						<div>C</div>
 						{visible
@@ -208,6 +207,7 @@ function Toolbar({ current, setCurrent, setLoading }) {
 						setPreview(true)
 						setLoading(false)
 						handleWidth()
+						setLocation('/')
 					}}>
 						<div>COOOL</div>
 					</Link>
@@ -217,7 +217,7 @@ function Toolbar({ current, setCurrent, setLoading }) {
 			<hr />
 
 			{/* NAV LINKS */}
-			<Links preview={preview} setPreview={setPreview} current={current} setCurrent={setCurrent} />
+			<Links preview={preview} setPreview={setPreview} current={current} setCurrent={setCurrent} location={location} setLocation={setLocation}/>
 		</div>
 	)
 }
