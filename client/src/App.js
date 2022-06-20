@@ -8,13 +8,14 @@ import Toolbar from "./components/toolbar/Toolbar";
 import "./App.css";
 
 function App() {
-	const [location, setLocation] = useState("/");
+	const [current, setCurrent] = useState(null);
+	const [loading, setLoading] = useState(false);
 
 	return (
 		<Router>
-			<Toolbar location={location} setLocation={setLocation}/>
+			<Toolbar current={current} setCurrent={setCurrent} setLoading={setLoading}/>
 			<Routes>
-				<Route path='/' element={<Landing />} />
+				<Route path='/' element={<Landing current={current} setCurrent={setCurrent} loading={loading}/>} />
 				<Route path='/index' element={<Index />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/project' element={<Project />} />

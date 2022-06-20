@@ -1,7 +1,7 @@
 .toolbar {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 100vw;
     margin: 0;
 }
 
@@ -16,6 +16,7 @@
     line-height: 1.4em;
     color: black;
     animation: expand 3s linear -0.07s forwards;
+    padding: 0 30px;
 }
 
 .no-animation-coool {
@@ -36,7 +37,8 @@ div {
 .load-text {
     display: flex;
     width: fit-content;
-    padding: 0 5px;
+    position: relative;
+    width: 100vw;
 }
 
 .loading-text {
@@ -52,6 +54,16 @@ div {
     background: transparent; 
 }
 
+/* RIGHT AND LEFT BUTTONS */
+.buttons-container {
+    display: flex;
+    z-index: 6;
+    position: absolute;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
 button {
     border: none;
     border-radius: 2px;
@@ -61,18 +73,15 @@ button {
     cursor: pointer;
     z-index: 6;
     position: absolute;
-    height: 25px;
-    width: 25px;
+    height: 140px;
+    width: 70px;
     margin: 0;
     padding: 0;
 }
 
 .arrow {
-    display: flex;
     color: rgba(0, 0, 0, 0.507);
     margin: 0;
-    position: relative;
-    top: 35%;
 }
 
 .arrow:hover {
@@ -80,22 +89,16 @@ button {
 }
 
 svg {
-    position: absolute;
     margin: 0;
     background-color: rgba(0, 0, 0, 0.123);
     border-radius: 2px;
 }
 
 .right {
-    transform: translateX(-7em);
+    transform: translateX(-1.6em);
 }
 .left {
-    transform: translateX(7em);
-    padding-left: 25px;
-}
-
-.each-o:hover {
-    color: gray;
+    transform: translateX(0.7em);
 }
 
 /* ANIMATION KEYFRAMES */
@@ -131,7 +134,6 @@ hr {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
 }
 
 .current-link {
@@ -159,6 +161,10 @@ p {
     color: gray;
 }
 
+.links-with-video a, .links-with-video p {
+    color: white;
+}
+
 /* PREVIEW ARROW UP ANIMATION */
 .up-arrow {
     animation: arrow 1s both infinite;
@@ -168,6 +174,7 @@ p {
 
 .preview-container p {
     display: inline;
+    z-index: 5;
 }
 
 .p-container {
@@ -204,32 +211,43 @@ p {
         align-items: center;
     }
 
-    .toolbar-links, .current-link,
-    p {
+    .toolbar-links, .current-link, .links-with-video p {
         font-size: 24px;
         margin: 0;
         padding: 8px 0px;
         text-decoration: none;
+    }
+
+    .links-with-video a, p {
         color: black;
     }
 
     .p-container {
+        font-size: 24px;
         padding: 8px 8px;
+    }
+
+    .links-with-video p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width: 150px;
+        height: 50px;
+        color: black;
+        margin: 0;
     }
 
     .up-arrow {
         margin-top: 8px;
     }
 
-    .arrow {
-        top: 32%;
+    button {
+        height: 112px;
+        width: 60px;
     }
 
     .right {
-        transform: translateX(-5.5em);
-    }
-    .left {
-        transform: translateX(6.5em);
-        padding-left: 0;
+        transform: translateX(-1.3em);
     }
 }
