@@ -1,5 +1,15 @@
-const router = require("express").Router();
+const router = require('express').Router();
+const {
+  getProjects,
+  getSingleProject,
+} = require('../../controllers/projectController');
 
-router.route("/index").post((req, res) => console.log("Hello World"));
+// /api/users
+// router.route('/')
+//   .get(getSingleProject)
+
+// /api/index
+router.route('/')
+  .get(getProjects)
 
 module.exports = router;

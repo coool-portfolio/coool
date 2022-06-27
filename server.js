@@ -1,25 +1,20 @@
-const express = require("express");
-const mongoose = require("mongoose");
+// require express and routes
+const express = require('express');
+const db = require('./config/connection');
+const routes = require('./routes');
 
+// need for heroku deploy
 const PORT = process.env.PORT || 3001;
 const app = express();
-const routes = require("./routes");
 
-app.use(routes);
-
+// middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(routes);
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-	app.use(express.static("client/build"));
-}
-
-// Connect to the Mongo DB
-mongoose.connect(
-	process.env.MONGODB_URI || "mongodb://localhost/cooolprojects"
-);
-
-app.listen(PORT, function () {
-	console.log(`🌎 ==> API server now on port ${PORT}!`);
+// PORT
+db.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`API server running on localhost:${PORT}!`);
+  });
 });
