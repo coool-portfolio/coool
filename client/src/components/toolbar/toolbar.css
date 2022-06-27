@@ -48,6 +48,10 @@ div {
     scroll-behavior: smooth;
 }
 
+.each-o {
+    cursor: pointer;
+}
+
 ::-webkit-scrollbar {
     width: 0; 
     height: 0;

@@ -10,12 +10,13 @@ import "./App.css";
 function App() {
 	const [current, setCurrent] = useState(null);
 	const [loading, setLoading] = useState(false);
+	const [modal, setModal] = useState(false);
 
 	return (
 		<Router>
-			<Toolbar current={current} setCurrent={setCurrent} setLoading={setLoading}/>
+			<Toolbar current={current} setCurrent={setCurrent} setLoading={setLoading} modal={modal} setModal={setModal} />
 			<Routes>
-				<Route path='/' element={<Landing current={current} setCurrent={setCurrent} loading={loading}/>} />
+				<Route path='/' element={<Landing current={current} setCurrent={setCurrent} loading={loading} modal={modal} setModal={setModal} />} />
 				<Route path='/index' element={<Index />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/project' element={<Project />} />

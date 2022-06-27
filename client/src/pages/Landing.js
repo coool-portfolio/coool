@@ -1,8 +1,9 @@
 import React from "react";
 import "./landing.css";
 import Video from "../components/video/Video"
+import VideoModal from "../components/video/VideoModal"
 
-export default function Landing({ current, loading }) {
+export default function Landing({ current, loading, modal, setModal }) {
 	return (
 		<div>
 			{!current &&
@@ -19,7 +20,8 @@ export default function Landing({ current, loading }) {
 
 			{/* VIDEO PLAYER */}
 			<div className="preview">
-				<Video current={current} />
+				<VideoModal current={current} modal={modal} />
+				<Video current={current} modal={modal} setModal={setModal}/>
 			</div>
 
 			{/* LOADING ALERT */}

@@ -18,7 +18,7 @@ function Links({ preview, setPreview, current, setCurrent, location, setLocation
         setTimeout(() => {
             setDelay(true)
         }, 1000)
-    }, [setPreview]);
+    }, [setPreview, location]);
 
     // links appear after a beat
     useEffect(() => {
