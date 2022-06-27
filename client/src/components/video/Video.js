@@ -1,12 +1,24 @@
+import React from "react";
 import './video.css'
 
-function Video({ current }) {
-    // console.log(current)
+function Video({ current, modal, setModal }) {
+    const handleClick = (e) => {
+        e.preventDefault()
+
+        setModal(true)
+    }
+
     return (
         <>
-            {current &&
-                <iframe id="video" className="video" title={current.title} src={current.id} allow="autoplay; fullscreen" frameBorder={0} allowFullScreen></iframe>
-            }
+            <div className="click-container">
+                {!modal && current !== null &&
+                    <div className="play-button" onClick={handleClick} />
+                }
+
+                {current &&
+                    <iframe preload="metadata" id="video" className="video clip" title={current.title} src={current.clip} allow="autoplay; fullscreen" frameBorder={0} allowFullScreen></iframe>
+                }
+            </div>
         </>
     )
 }
