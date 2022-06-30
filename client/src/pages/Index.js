@@ -94,16 +94,12 @@ function Index() {
 
 	return (
 		<div>
-			{/* <IndexCard
+			<IndexCard
 				client='Client'
 				project='Project'
 				year='Year'
 				projects={projects}
-			/> */}
-
-			{projects.map((projects) => (
-				<IndexCard projects={projects} />
-			))}
+			/>
 		</div>
 	);
 }
