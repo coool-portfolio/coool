@@ -85,22 +85,21 @@ function Index() {
 
 	function loadProjects() {
 		API.getProjects()
-			.then((res) => setProjects(res.data))
+			.then((res) => {
+				console.log(res.data);
+				setProjects(res.data);
+			})
 			.catch((err) => console.log(err));
 	}
 
 	return (
 		<div>
-			{/* <IndexCard
+			<IndexCard
 				client='Client'
 				project='Project'
 				year='Year'
 				projects={projects}
-			/> */}
-
-			{projects.map((project) => (
-				<IndexCard client={project.client} />
-			))}
+			/>
 		</div>
 	);
 }
