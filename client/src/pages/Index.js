@@ -85,7 +85,10 @@ function Index() {
 
 	function loadProjects() {
 		API.getProjects()
-			.then((res) => setProjects(res.data))
+			.then((res) => {
+				console.log(res.data);
+				setProjects(res.data);
+			})
 			.catch((err) => console.log(err));
 	}
 
@@ -98,8 +101,8 @@ function Index() {
 				projects={projects}
 			/> */}
 
-			{projects.map((project) => (
-				<IndexCard client={project.client} />
+			{projects.map((projects) => (
+				<IndexCard projects={projects} />
 			))}
 		</div>
 	);
