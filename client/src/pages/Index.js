@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import IndexCard from "../components/index/IndexCard";
-import KSwissImg from "../assets/images/project-images/K-Swiss-Img.jpeg";
-import HalaImg from "../assets/images/project-images/Hala-Somehow-Img.jpg";
+// import KSwissImg from "../assets/images/project-images/K-Swiss-Img.jpeg";
+// import HalaImg from "../assets/images/project-images/Hala-Somehow-Img.jpg";
 import API from "../utils/API";
 
 // const projects = [
@@ -91,7 +91,8 @@ function Index() {
 			})
 			.catch((err) => console.log(err));
 	}
-
+	console.log(projects)
+	
 	return (
 		<div>
 			<IndexCard
