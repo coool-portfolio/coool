@@ -1,8 +1,10 @@
 import axios from "axios";
 
-export default {
+const exportedAPI = {
 	getProjects: function (query) {
-		console.log(query);
 		return axios.get(`/api/index/`, query);
 	},
 };
+
+
+export default exportedAPI
