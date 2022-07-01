@@ -7,7 +7,7 @@ function Video({ current, modal, setModal }) {
 
         setModal(true)
     }
-
+    
     return (
         <>
             <div className="click-container">
@@ -16,7 +16,7 @@ function Video({ current, modal, setModal }) {
                 }
 
                 {current &&
-                    <iframe preload="metadata" id="video" className="video clip" title={current.title} src={current.clip} allow="autoplay; fullscreen" frameBorder={0} allowFullScreen></iframe>
+                    <iframe preload="metadata" id="video" className="video clip" title={current.title} src={current.preview + '&autoplay=1&loop=1&background=1'} allow="autoplay; fullscreen" frameBorder={0} ></iframe>
                 }
             </div>
         </>

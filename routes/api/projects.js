@@ -1,15 +1,15 @@
 const router = require('express').Router();
 const {
   getProjects,
-  getSingleProject,
+  getProjectLinks,
 } = require('../../controllers/projectController');
 
-// /api/users
-// router.route('/')
-//   .get(getSingleProject)
+// /api/
+router.route('/links')
+  .get(getProjectLinks)
 
 // /api/index
-router.route('/')
+router.route('/index')
   .get(getProjects)
 
 module.exports = router;
