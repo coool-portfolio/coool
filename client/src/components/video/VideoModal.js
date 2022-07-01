@@ -5,7 +5,7 @@ function VideoModal({ current, modal }) {
     return (
         <>
             {modal && current &&
-                <iframe preload="metadata" className="video video-modal" title={current.title} src={current.link} allow="autoplay; fullscreen" frameBorder={0} allowFullScreen></iframe>
+                <iframe preload="metadata" className="video video-modal" title={current.title} src={current.fullVideo} allow="autoplay; fullscreen" frameBorder={0} ></iframe>
             }
         </>
     )

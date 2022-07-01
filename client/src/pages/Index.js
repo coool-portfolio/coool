@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import IndexCard from "../components/index/IndexCard";
 // import KSwissImg from "../assets/images/project-images/K-Swiss-Img.jpeg";
 // import HalaImg from "../assets/images/project-images/Hala-Somehow-Img.jpg";
-import API from "../utils/API";
 
 // const projects = [
 // 	{
@@ -76,32 +75,24 @@ import API from "../utils/API";
 // 	},
 // ];
 
-function Index() {
-	const [projects, setProjects] = useState([]);
-
+function Index({ location, projects, loadProjects, status }) {
 	useEffect(() => {
 		loadProjects();
-	}, []);
+	}, [location, loadProjects]);
 
-	function loadProjects() {
-		API.getProjects()
-			.then((res) => {
-				console.log(res.data);
-				setProjects(res.data);
-			})
-			.catch((err) => console.log(err));
-	}
-	console.log(projects)
-	
 	return (
-		<div>
-			<IndexCard
-				client='Client'
-				project='Project'
-				year='Year'
-				projects={projects}
-			/>
-		</div>
+		<>
+			{!status &&
+				<div>
+					<IndexCard
+						// client='Client'
+						// project='Project'
+						// year='Year'
+						projects={projects}
+					/>
+				</div>
+			}
+		</>
 	);
 }
 

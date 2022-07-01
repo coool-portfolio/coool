@@ -1,9 +1,18 @@
 const Project = require('../models/Project');
 
 module.exports = {
-  // get all users
+  // get all projects
   getProjects(req, res) {
     Project.find({})
+    .then(projects => res.json(projects))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+},
+  // get all project links
+  getProjectLinks(req, res) {
+    Project.find({}, ['title', 'fullVideo', 'preview'])
     .then(projects => res.json(projects))
     .catch(err => {
         console.log(err);

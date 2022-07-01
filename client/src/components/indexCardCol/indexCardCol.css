@@ -37,8 +37,14 @@ h5 {
 figure {
 	background-position: center;
 	background-size: cover;
+	position: relative;
 	margin: 0;
 	height: auto;
+	background-color: transparent;
+}
+
+iframe {
+	background-color: transparent;
 }
 
 /* XL */

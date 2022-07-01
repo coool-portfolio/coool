@@ -4,39 +4,38 @@ import "./toolbar.css";
 
 import Links from "./Links"
 
-// Hard coded data
+// Hard coded data fallback incase db fails
 const nav = [
-	{ title: "Hideout", letter: "O", link: "https://player.vimeo.com/video/589106246?h=188fd4f2fb&title=0&byline=0&portrait=0&autoplay=1&loop=1", clip: "https://player.vimeo.com/video/589106246?h=188fd4f2fb&autoplay=1&loop=1&background=1" },
-	{ title: "Portraits of Men Crying", letter: "O", link: "https://player.vimeo.com/video/546246624?h=396eb1378e&title=0&byline=0&portrait=0&autoplay=1&loop=1", clip: "https://player.vimeo.com/video/722578866?h=8c8e8f3648&autoplay=1&loop=1&background=1" },
-	{ title: "Time to Melt", letter: "O", link: "https://www.youtube.com/embed/7EIyD_lQaXU?autoplay=1", clip: "https://player.vimeo.com/video/722579159?h=7608bd8e12&autoplay=1&loop=1&background=1" },
-	{ title: "2021: A Personal Space Odyssey", letter: "O", link: "https://www.youtube.com/embed/B2nXcWyBYdE?autoplay=1", clip: "https://player.vimeo.com/video/722579118?h=c4e0c70e9d&autoplay=1&loop=1&background=1" },
-	{ title: "Dressing Down", letter: "O", link: "https://www.youtube.com/embed/PchaMpnIhBU?autoplay=1", clip: "https://player.vimeo.com/video/722579427?h=2558561ea0&autoplay=1&loop=1&background=1" },
+	{ title: "Hideout", link: "https://player.vimeo.com/video/589106246?h=188fd4f2fb&title=0&byline=0&portrait=0&autoplay=1&loop=1", clip: "https://player.vimeo.com/video/722579273?h=c0ad86b01e" },
+	{ title: "Portraits of Men Crying", link: "https://player.vimeo.com/video/546246624?h=396eb1378e&title=0&byline=0&portrait=0&autoplay=1&loop=1", clip: "https://player.vimeo.com/video/722578866?h=8c8e8f3648" },
+	{ title: "Time to Melt", link: "https://www.youtube.com/embed/7EIyD_lQaXU?autoplay=1", clip: "https://player.vimeo.com/video/722579159?h=7608bd8e12" },
+	{ title: "2021: A Personal Space Odyssey", link: "https://www.youtube.com/embed/B2nXcWyBYdE?autoplay=1", clip: "https://player.vimeo.com/video/722579118?h=c4e0c70e9d" },
+	{ title: "Dressing Down", link: "https://www.youtube.com/embed/PchaMpnIhBU?autoplay=1", clip: "https://player.vimeo.com/video/722579427?h=2558561ea0" },
 
-	{ title: "Gagosian Premieres: Gregory Crewdson", letter: "O", link: "https://www.youtube.com/embed/GARXqyRfFcY?autoplay=1", clip: "https://player.vimeo.com/video/722579367?h=1f085cc247&autoplay=1&loop=1&background=1" },
-	{ title: "Emotional R&B", letter: "O", link: "https://www.youtube.com/embed/bHHHbpQnd-4?autoplay=1", clip: "https://player.vimeo.com/video/722579380?h=53205fd7fd&autoplay=1&loop=1&background=1" },
-	{ title: "Somehow", letter: "O", link: "https://www.youtube.com/embed/U00fIl_ArHQ?autoplay=1", clip: "https://www.youtube.com/embed/U00fIl_ArHQ?autoplay=1" },
-	{ title: "At It Again", letter: "O", link: "https://www.youtube.com/embed/VRiENpklOO4?autoplay=1", clip: "https://player.vimeo.com/video/722579668?h=26cf5f979f&autoplay=1&loop=1&background=1" },
-	{ title: "The Knife", letter: "O", link: "https://www.youtube.com/embed/6109rocRH-Q?autoplay=1", clip: "https://player.vimeo.com/video/722579630?h=16467148ad&autoplay=1&loop=1&background=1" },
+	{ title: "Gagosian Premieres: Gregory Crewdson", link: "https://www.youtube.com/embed/GARXqyRfFcY?autoplay=1", clip: "https://player.vimeo.com/video/722579367?h=1f085cc247" },
+	{ title: "Emotional R&B", link: "https://www.youtube.com/embed/bHHHbpQnd-4?autoplay=1", clip: "https://player.vimeo.com/video/722579380?h=53205fd7fd" },
+	{ title: "Somehow", link: "https://www.youtube.com/embed/U00fIl_ArHQ?autoplay=1", clip: "https://player.vimeo.com/video/722578900?h=9292857ea0" },
+	{ title: "At It Again", link: "https://www.youtube.com/embed/VRiENpklOO4?autoplay=1", clip: "https://player.vimeo.com/video/722579668?h=26cf5f979f" },
+	{ title: "The Knife", link: "https://www.youtube.com/embed/6109rocRH-Q?autoplay=1", clip: "https://player.vimeo.com/video/722579630?h=16467148ad" },
 
-	{ title: "No Wings", letter: "O", link: "https://www.youtube.com/embed/kq2QPimzQRw?autoplay=1", clip: "https://player.vimeo.com/video/722579197?h=435cc4f5a1&autoplay=1&loop=1&background=1" },
-	{ title: "Daily Routine", letter: "O", link: "https://www.youtube.com/embed/_Xv1JByUZ9E?autoplay=1", clip: "https://player.vimeo.com/video/722579588?h=08f8d01693&autoplay=1&loop=1&background=1" },
-	{ title: "Loneliness", letter: "O", link: "https://www.youtube.com/embed/SGtD82ExtAQ?autoplay=1", clip: "https://player.vimeo.com/video/722579545?h=a7b8d5b7ae&autoplay=1&loop=1&background=1" },
-	{ title: "Alien With A Sleepmask On", letter: "O", link: "https://www.youtube.com/embed/uqDNufv66Wg?autoplay=1", clip: "https://player.vimeo.com/video/722578961?h=64f8ae2025&autoplay=1&loop=1&background=1" },
-	{ title: "Dissolving", letter: "O", link: "https://www.youtube.com/embed/JdQl53qwSAc?autoplay=1", clip: "https://player.vimeo.com/video/722579513?h=5295a81a22&autoplay=1&loop=1&background=1" },
+	{ title: "No Wings", link: "https://www.youtube.com/embed/kq2QPimzQRw?autoplay=1", clip: "https://player.vimeo.com/video/722579197?h=435cc4f5a1" },
+	{ title: "Daily Routine", link: "https://www.youtube.com/embed/_Xv1JByUZ9E?autoplay=1", clip: "https://player.vimeo.com/video/722579588?h=08f8d01693" },
+	{ title: "Loneliness", link: "https://www.youtube.com/embed/SGtD82ExtAQ?autoplay=1", clip: "https://player.vimeo.com/video/722579545?h=a7b8d5b7ae" },
+	{ title: "Alien With A Sleepmask On", link: "https://www.youtube.com/embed/uqDNufv66Wg?autoplay=1", clip: "https://player.vimeo.com/video/722578961?h=64f8ae2025" },
+	{ title: "Dissolving", link: "https://www.youtube.com/embed/JdQl53qwSAc?autoplay=1", clip: "https://player.vimeo.com/video/722579513?h=5295a81a22" },
 
-	{ title: "Here Comes the Snow", letter: "O", link: "https://www.youtube.com/embed/tZFUcZTyqD4?autoplay=1", clip: "https://player.vimeo.com/video/722579315?h=31f97263b2&autoplay=1&loop=1&background=1" },
-	{ title: "Muerte's Death", letter: "O", link: "https://player.vimeo.com/video/362910525?h=9b4df0fbf9&title=0&byline=0&portrait=0&autoplay=1&loop=1", clip: "https://player.vimeo.com/video/722579233?h=bc23b206c9&autoplay=1&loop=1&background=1" },
-	{ title: "New Sounds x Dizzy Fae", letter: "O", link: "https://player.vimeo.com/video/285129219?h=30852f60df&autoplay=1&loop=1&color=ffffff&portrait=0", clip: "https://player.vimeo.com/video/722579473?h=64d1bdaba0&autoplay=1&loop=1&background=1" },
+	{ title: "Here Comes the Snow", link: "https://www.youtube.com/embed/tZFUcZTyqD4?autoplay=1", clip: "https://player.vimeo.com/video/722579315?h=31f97263b2" },
+	{ title: "Muerte's Death", link: "https://player.vimeo.com/video/362910525?h=9b4df0fbf9&title=0&byline=0&portrait=0&autoplay=1&loop=1", clip: "https://player.vimeo.com/video/722579233?h=bc23b206c9" },
+	{ title: "New Sounds x Dizzy Fae", link: "https://player.vimeo.com/video/285129219?h=30852f60df&autoplay=1&loop=1&color=ffffff&portrait=0", clip: "https://player.vimeo.com/video/722579473?h=64d1bdaba0" },
 ]
 
-function Toolbar({ current, setCurrent, setLoading, modal, setModal }) {
+function Toolbar({ current, setCurrent, location, setLocation, setLoading, setModal, projectLinks }) {
 	const [visible, setVisible] = useState(true);
 	const [right, setRight] = useState(false);
 	const [left, setLeft] = useState(false);
 	const [showAnimation, setShowAnimation] = useState(true);
 	const [preview, setPreview] = useState(true);
 	const [change, setChange] = useState("");
-	const [location, setLocation] = useState(window.location.pathname);
 
 	// watches the size of window
 	useEffect(() => {
@@ -62,8 +61,6 @@ function Toolbar({ current, setCurrent, setLoading, modal, setModal }) {
 		setTimeout(() => {
 			setVisible(false)
 		}, 750)
-
-		// setModal(false)
 	}, []);
 
 	useEffect(() => {
@@ -120,7 +117,7 @@ function Toolbar({ current, setCurrent, setLoading, modal, setModal }) {
 	}
 
 	// O nav
-	const handleChange = (clip, title, link) => {
+	const handleChange = (preview, title, fullVideo) => {
 		setModal(false)
 		setPreview(false)
 		setLoading(true)
@@ -128,18 +125,18 @@ function Toolbar({ current, setCurrent, setLoading, modal, setModal }) {
 		setCurrent({
 			...current,
 			title: title,
-			link: link,
-			clip: clip,
+			fullVideo: fullVideo,
+			preview: preview,
 		});
 
 
 		// setting the current hovered on "O" to gray
-		document.getElementById(clip).style.color = "gray"
+		document.getElementById(preview).style.color = "gray"
 		// setting the previous watched "O" to a random color
 		if (change === null) {
-			document.getElementById(clip).style.color = "gray"
-		} else if (change.clip !== clip) {
-			document.getElementById(change.clip).style.color = generateRandomColor()
+			document.getElementById(preview).style.color = "gray"
+		} else if (change.preview !== preview) {
+			document.getElementById(change.preview).style.color = generateRandomColor()
 		}
 	};
 	// gets a random color
@@ -201,18 +198,37 @@ function Toolbar({ current, setCurrent, setLoading, modal, setModal }) {
 						{visible
 							? <div>OOO</div>
 							: <div className="loading-text">
-								{nav.map((o, i) => (
-									<div
-										onMouseEnter={() => handleChange(o.clip, o.title, o.link)}
-										onClick={openModal}
-										key={i}
-										id={o.clip}
-										title={o.title}
-										className="each-o"
-									>
-										{o.letter}
-									</div>
-								))}
+								{projectLinks === null ?
+									<>
+										{nav.map((o, i) => (
+											<div
+												onMouseEnter={() => handleChange(o.clip, o.title, o.link)}
+												onClick={openModal}
+												key={i}
+												id={o.clip}
+												title={o.title}
+												className="each-o"
+											>
+												O
+											</div>
+										))}
+									</>
+									:
+									<>
+										{projectLinks.map((o, i) => (
+											<div
+												onMouseEnter={() => handleChange(o.preview, o.title, o.fullVideo)}
+												onClick={openModal}
+												key={i}
+												id={o.preview}
+												title={o.title}
+												className="each-o"
+											>
+												O
+											</div>
+										))}
+									</>
+								}
 							</div>
 						}
 						<div>L</div>
