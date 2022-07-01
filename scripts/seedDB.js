@@ -15,39 +15,39 @@ const projectSeed = [
 		year: "2022",
 		credits:
 			"Director: coool\nExecutive Producer: Casey Lock\nProducer: Brendan Brown\nProd. Company: Method and Madness\n\nDP: Kevin Horn\n1st AC: Javier Castillo & Carlos Cabrera-Mayol\nSteadicam Op: Kevin Veselka\n\nGaffer: Stephen Wester\nKey Grip: William Westgaard\nGrip: Brandon Hinsley\n\n1st AD: Phil Evans\nPA: Alex Leeds\n\nProduction Designer: Mitch Ransdell\nEditor: Max Mooney\nColorist: Kevin Horn\nOriginal Music, Sound Design and Mix: Ethan Houser\n\nThank you to:\nJorie and Mike Landfear\nChinatown Square Association\nThe Grove\nAtlas Lighting\n\nThief #1: Kenyon Ellsworth\nGuard #1: Nic Gohl\nThief #2: Jimmy Sisto\nThief #3: Ryan Nolen\nGuard #2: Buddy Heeley",
-		preview:
-			"https://player.vimeo.com/video/722579273?h=c0ad86b01e",
-		fullVideo: "https://player.vimeo.com/video/589106246?h=188fd4f2fb&title=0&byline=0&portrait=0&autoplay=1&loop=1",
+		preview: "https://player.vimeo.com/video/722579273?h=c0ad86b01e",
+		fullVideo:
+			"https://player.vimeo.com/video/589106246?h=188fd4f2fb&title=0&byline=0&portrait=0&autoplay=1&loop=1",
 		stillImg:
 			"https://drive.google.com/file/d/1-4NifBOt4qw0eDExMM44Y5_Ddb1oYcsQ/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Kum & Go\nBrand Opus",
-	// 	mainPageActive: false,
-	// 	title: "Sad Food, Fresh Food",
-	// 	year: "2022",
-	// 	credits:
-	// 		"Director: John TerEick\nDP: David Hughes Jr.\nMix and Mastering: Ryan Deffet",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=pSCPdO7Yxfc",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/113Vp9nXgwx1L84NnzYvw0y7tazE5X3Rj/view",
-	// 	notes: "not yet released",
-	// },
-	// {
-	// 	client: "Walker\nMajestic Casual",
-	// 	mainPageActive: false,
-	// 	title: "Majestic Sessions",
-	// 	year: "2022",
-	// 	credits:
-	// 		"Director: John TerEick\nDP: David Hughes Jr.\nMix and Mastering: Ryan Deffet",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=pSCPdO7Yxfc",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/113Vp9nXgwx1L84NnzYvw0y7tazE5X3Rj/view",
-	// 	notes: "",
-	// },
+	{
+		client: "Kum & Go\nBrand Opus",
+		mainPageActive: false,
+		title: "Sad Food, Fresh Food",
+		year: "2022",
+		credits:
+			"Director: John TerEick\nDP: David Hughes Jr.\nMix and Mastering: Ryan Deffet",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=pSCPdO7Yxfc",
+		stillImg:
+			"https://drive.google.com/file/d/113Vp9nXgwx1L84NnzYvw0y7tazE5X3Rj/view",
+		notes: "not yet released",
+	},
+	{
+		client: "Walker\nMajestic Casual",
+		mainPageActive: false,
+		title: "Majestic Sessions",
+		year: "2022",
+		credits:
+			"Director: John TerEick\nDP: David Hughes Jr.\nMix and Mastering: Ryan Deffet",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=pSCPdO7Yxfc",
+		stillImg:
+			"https://drive.google.com/file/d/113Vp9nXgwx1L84NnzYvw0y7tazE5X3Rj/view",
+		notes: "",
+	},
 	{
 		client: "Portraits of Men Crying",
 		mainPageActive: true,
@@ -56,37 +56,38 @@ const projectSeed = [
 		credits:
 			"Directed by coool (John TerEick and Jake Nokovic)\n\nDirector of Photography\nDavid Hughes Jr.\n\nEditor Max Mooney\n\nArt Direction and Design\nBrian Hedrick\n\nColorist\nSam Howells\n\nSound Design and Mix\nAndrew TerEick\n\nBilly Hoffman\n\nJamaal Harris\n\nRyan Nolen\n\nJohn TerEick\n\nTravis Delgado\n\nJames Sisto\n\nSteve Pavlik\n\nOriginal Score\nAndrew TerEick\n\nAdditional Photography\nGarret Justus\n\nThanks\nLainey Muhlberg",
 		preview: "https://player.vimeo.com/video/722578866?h=8c8e8f3648",
-		fullVideo: "https://player.vimeo.com/video/546246624?h=396eb1378e&title=0&byline=0&portrait=0&autoplay=1&loop=1",
+		fullVideo:
+			"https://player.vimeo.com/video/546246624?h=396eb1378e&title=0&byline=0&portrait=0&autoplay=1&loop=1",
 		stillImg:
 			"https://drive.google.com/file/d/1yTBSGUVrKgkdKfLLuBN5EOCY_JgDyRaD/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Ratboys\nTopshelf Records",
-	// 	mainPageActive: false,
-	// 	title: "Happy Birthday Ratboy",
-	// 	year: "2021",
-	// 	credits:
-	// 		"Directed by John TerEick\n\nDirector of Photography - Ryan Zeller \nCamera Assistant - Lucinda Harstrick \nGaffer - Stephen Wester \n\nEditor - Max Mooney \nColorist - David Hughes Jr. \n\nLocation Sound - Andrew TerEick \nFilm Sound Design and Mix - Andrew TerEick \nMusic Recording Engineer - Adam Beck \nRecording Assist / Monitors Engineer - Corey Willis \n\nRatboys is Julia Steiner, Dave Sagan, Sean Neumann, and Marcus Nuccio \n\nRhodes, Pocket Piano, Tambourine - Evan Loritsch \n\nSpecial Thanks To: \nSchubas Tavern \nPogi Studios \nAtlas Lighting \nTom Conrad\nEmily Egerton \nDan Apodaca  \nLainey Muhlberg \nDelia Nuccio ",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=ajVAcqo6SpA&t=31s",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1hSrRsZPSeTceMwv3jk_fEK6HgZohlmFU/view",
-	// 	notes: "",
-	// },
-	// {
-	// 	client: "Disq\nSaddle Creek Records",
-	// 	mainPageActive: false,
-	// 	title: "Gentle",
-	// 	year: "2021",
-	// 	credits:
-	// 		"Directed by: coool (Jake Nokovic and John TerEick) \n\nStarring: Greta White\n\nDirector of Photography: David Hughes Jr\nFirst AC: Nichole Harmon\n\nEditor: Jake Nokovic\nColorist: Sam Howells\nVFX: John TerEick",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=FX5XiGWQtiU",
-	// 	stillImg:
-	// 		"https://docs.google.com/spreadsheets/d/16-mkSBM18xLdPGCRvxg7QiXfKp6G5pDjxo70WPEFXIg/edit#gid=0",
-	// 	notes: "",
-	// },
+	{
+		client: "Ratboys\nTopshelf Records",
+		mainPageActive: false,
+		title: "Happy Birthday Ratboy",
+		year: "2021",
+		credits:
+			"Directed by John TerEick\n\nDirector of Photography - Ryan Zeller \nCamera Assistant - Lucinda Harstrick \nGaffer - Stephen Wester \n\nEditor - Max Mooney \nColorist - David Hughes Jr. \n\nLocation Sound - Andrew TerEick \nFilm Sound Design and Mix - Andrew TerEick \nMusic Recording Engineer - Adam Beck \nRecording Assist / Monitors Engineer - Corey Willis \n\nRatboys is Julia Steiner, Dave Sagan, Sean Neumann, and Marcus Nuccio \n\nRhodes, Pocket Piano, Tambourine - Evan Loritsch \n\nSpecial Thanks To: \nSchubas Tavern \nPogi Studios \nAtlas Lighting \nTom Conrad\nEmily Egerton \nDan Apodaca  \nLainey Muhlberg \nDelia Nuccio ",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=ajVAcqo6SpA&t=31s",
+		stillImg:
+			"https://drive.google.com/file/d/1hSrRsZPSeTceMwv3jk_fEK6HgZohlmFU/view",
+		notes: "",
+	},
+	{
+		client: "Disq\nSaddle Creek Records",
+		mainPageActive: false,
+		title: "Gentle",
+		year: "2021",
+		credits:
+			"Directed by: coool (Jake Nokovic and John TerEick) \n\nStarring: Greta White\n\nDirector of Photography: David Hughes Jr\nFirst AC: Nichole Harmon\n\nEditor: Jake Nokovic\nColorist: Sam Howells\nVFX: John TerEick",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=FX5XiGWQtiU",
+		stillImg:
+			"https://drive.google.com/file/d/1HxCZEXQ8VdPiNvaP47piCFHkugFfoZ2g/view",
+		notes: "",
+	},
 	{
 		client: "Sam Evian\nFat Possum Records",
 		mainPageActive: true,
@@ -100,32 +101,32 @@ const projectSeed = [
 			"https://drive.google.com/file/d/1D0iTODdzFpyhP4lIQc6872g1Um4jSyKv/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Tasha\nFather Daughter Records",
-	// 	mainPageActive: false,
-	// 	title: "Perfect Wife",
-	// 	year: "2021",
-	// 	credits:
-	// 		"Directed by: coool (John TerEick and Jake Nokovic)\n\nDirector of Photography: Cain Camacho\n1st AC: Bryan Wright\nGaffer: Kevin Veselka\n\nEditor: Max Mooney\nColorist: Cody L. Sandberg\n\nChoreography: Natalia White\n\nThanks: Pogi Studios, Atlas Lighting, Mitch McAndrew, Liam Brekke, Kai Lee Liu, Ryan Stephens, Kenyon Ellsworth, Lainey Muhlberg, Ashley Guerrero, Jessi Frick",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=c-K2hAQNmss",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/10ns_gP5FODAIu4-41EHbmFo1rZ28Ovi-/view",
-	// 	notes: "",
-	// },
-	// {
-	// 	client: "Lainey Strange\nLGM Records",
-	// 	mainPageActive: false,
-	// 	title: "Cowgirl Angels",
-	// 	year: "2021",
-	// 	credits:
-	// 		"Directed and Edited by: John TerEick\nDirector of Photography: David Hughes Jr.\nGaffer & Steadicam Operator: Kevin Veselka\nColorist: David Hughes Jr.\nTitles: Brian Hedrick\n\nStarring:\nLainey Muhlberg\nLuna\n\nSpecial Thanks:\nMarco Morales and Elise Metzger\nAmbler’s Texaco Station\nVillage of Dwight\nMitch Ransdell\nThe Grove\nCasey Lock",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=tA0h8ypYb8M",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1vo4_ULppklVirUAdFsPczssstWM1reYM/view",
-	// 	notes: "",
-	// },
+	{
+		client: "Tasha\nFather Daughter Records",
+		mainPageActive: false,
+		title: "Perfect Wife",
+		year: "2021",
+		credits:
+			"Directed by: coool (John TerEick and Jake Nokovic)\n\nDirector of Photography: Cain Camacho\n1st AC: Bryan Wright\nGaffer: Kevin Veselka\n\nEditor: Max Mooney\nColorist: Cody L. Sandberg\n\nChoreography: Natalia White\n\nThanks: Pogi Studios, Atlas Lighting, Mitch McAndrew, Liam Brekke, Kai Lee Liu, Ryan Stephens, Kenyon Ellsworth, Lainey Muhlberg, Ashley Guerrero, Jessi Frick",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=c-K2hAQNmss",
+		stillImg:
+			"https://drive.google.com/file/d/10ns_gP5FODAIu4-41EHbmFo1rZ28Ovi-/view",
+		notes: "",
+	},
+	{
+		client: "Lainey Strange\nLGM Records",
+		mainPageActive: false,
+		title: "Cowgirl Angels",
+		year: "2021",
+		credits:
+			"Directed and Edited by: John TerEick\nDirector of Photography: David Hughes Jr.\nGaffer & Steadicam Operator: Kevin Veselka\nColorist: David Hughes Jr.\nTitles: Brian Hedrick\n\nStarring:\nLainey Muhlberg\nLuna\n\nSpecial Thanks:\nMarco Morales and Elise Metzger\nAmbler’s Texaco Station\nVillage of Dwight\nMitch Ransdell\nThe Grove\nCasey Lock",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=tA0h8ypYb8M",
+		stillImg:
+			"https://drive.google.com/file/d/1vo4_ULppklVirUAdFsPczssstWM1reYM/view",
+		notes: "",
+	},
 	{
 		client: "Pet Symmetry\nTriple Crown Records",
 		mainPageActive: true,
@@ -166,19 +167,19 @@ const projectSeed = [
 			"https://drive.google.com/file/d/1TEcxwNgQy_tJ2U_vVGIdVLceZRbLGh_O/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Ratboys\nTopshelf Records",
-	// 	mainPageActive: false,
-	// 	title: "I Go Out at Night",
-	// 	year: "2020",
-	// 	credits:
-	// 		"Directed by: coool (John TerEick + Jake Nokovic)\nProducer: Lainey Muhlberg\nExecutive Producer: Casey Lock\nProduction Company: Method and Madness\n1st AD: Phil Evans\n\nDirector of Photography: David Hughes Jr\n1st AC: Nichole Harmon\nGaffer: Ethan Sandock\nGrips: Elena Baj, Gary Walker\n\nProduction Designer: Mitch Ransdell\nProduction Assistants: Brian Hedrick, Seamus Kreitzer, Jake Sagan\n\nEditor: Max Mooney\nColorist: Sam Howells\n\nSound Design and Mix: Zach Scheitlin\nTitle design: Brian Hedrick\n\nStarring: Julia Steiner, Dave Sagan, Sean Neumann, Marcus Nuccio, Joette Waters, Chloe the Pug\n\nSpecial thanks: The Grove, Tim Crisp, Lorin Ottlinger, Carol DiLorenzo, Whitehouse Post Chicago, Ross Zuchowski, Keynon Ellsworth, Kate Grube",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=EeTcmm_tq7U",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1t7q-CSV96elMMWbVqqn3iO9Bo7ufRlf1/view",
-	// 	notes: "",
-	// },
+	{
+		client: "Ratboys\nTopshelf Records",
+		mainPageActive: false,
+		title: "I Go Out at Night",
+		year: "2020",
+		credits:
+			"Directed by: coool (John TerEick + Jake Nokovic)\nProducer: Lainey Muhlberg\nExecutive Producer: Casey Lock\nProduction Company: Method and Madness\n1st AD: Phil Evans\n\nDirector of Photography: David Hughes Jr\n1st AC: Nichole Harmon\nGaffer: Ethan Sandock\nGrips: Elena Baj, Gary Walker\n\nProduction Designer: Mitch Ransdell\nProduction Assistants: Brian Hedrick, Seamus Kreitzer, Jake Sagan\n\nEditor: Max Mooney\nColorist: Sam Howells\n\nSound Design and Mix: Zach Scheitlin\nTitle design: Brian Hedrick\n\nStarring: Julia Steiner, Dave Sagan, Sean Neumann, Marcus Nuccio, Joette Waters, Chloe the Pug\n\nSpecial thanks: The Grove, Tim Crisp, Lorin Ottlinger, Carol DiLorenzo, Whitehouse Post Chicago, Ross Zuchowski, Keynon Ellsworth, Kate Grube",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=EeTcmm_tq7U",
+		stillImg:
+			"https://drive.google.com/file/d/1t7q-CSV96elMMWbVqqn3iO9Bo7ufRlf1/view",
+		notes: "",
+	},
 	{
 		client: "Hala\nCinematic Records",
 		mainPageActive: true,
@@ -231,19 +232,19 @@ const projectSeed = [
 			"https://drive.google.com/file/d/1V_4OX2H9bYxFWGn5nZ_BmPekUvM9HtCo/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Into It. Over It.\nTriple Crown Records",
-	// 	mainPageActive: false,
-	// 	title: "We Prefer Indoors",
-	// 	year: "2020",
-	// 	credits:
-	// 		"Directed by: coool (John TerEick and Jake Nokovic) \nDirector of Photography: David Hughes Jr\nColorist: Sam Howells\nEditor: John TerEick\n\nEvan Thomas Weiss\nAdam Edward Beck\nMatthew Eugene Frank\nJoe George Shadid\n\nAlso featuring\nErik Czaja\nChristine Goodwyne\nAndy Hendricks\nJared Karns\nMike Kinsella\nMichael Lux\nMegan McCoy\nEmily McKern\nBob Nanna\nMarcus Nuccio\nClaire Parrott\nNicolette Sara\nJuj Sutton\nStephen Sutton\nPeter Tuerk\nJim Tuerk\n\nAlso featuring Bella, Nick, and Tux",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=RAS2OCzOjUo",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1y6R_4EP8zy9aHAr8_HCroY-t8GK-zloU/view",
-	// 	notes: "",
-	// },
+	{
+		client: "Into It. Over It.\nTriple Crown Records",
+		mainPageActive: false,
+		title: "We Prefer Indoors",
+		year: "2020",
+		credits:
+			"Directed by: coool (John TerEick and Jake Nokovic) \nDirector of Photography: David Hughes Jr\nColorist: Sam Howells\nEditor: John TerEick\n\nEvan Thomas Weiss\nAdam Edward Beck\nMatthew Eugene Frank\nJoe George Shadid\n\nAlso featuring\nErik Czaja\nChristine Goodwyne\nAndy Hendricks\nJared Karns\nMike Kinsella\nMichael Lux\nMegan McCoy\nEmily McKern\nBob Nanna\nMarcus Nuccio\nClaire Parrott\nNicolette Sara\nJuj Sutton\nStephen Sutton\nPeter Tuerk\nJim Tuerk\n\nAlso featuring Bella, Nick, and Tux",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=RAS2OCzOjUo",
+		stillImg:
+			"https://drive.google.com/file/d/1y6R_4EP8zy9aHAr8_HCroY-t8GK-zloU/view",
+		notes: "",
+	},
 	{
 		client: "Tenci\nKeeled Scales Records",
 		mainPageActive: true,
@@ -257,32 +258,32 @@ const projectSeed = [
 			"https://drive.google.com/file/d/1rIBU1R5B7enY67wvMiqgHUkjgYdxG9t7/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Tenci\nKeeled Scales Records",
-	// 	mainPageActive: false,
-	// 	title: "Forgot My Horses Name",
-	// 	year: "2020",
-	// 	credits:
-	// 		"Directed by: coool (John TerEick and Jake Nokovic) \nProduction Manager: Lainey Muhlberg \n\nDirector of Photography: David Hughes Jr\nFirst AC: Jacob Velander\nSecond AC: Hannah Germaine\n\nColorist: Sam Howells\nTitle Design: Kenyon Elsworth\nSound Design and Mix: Andrew TerEick\n\nThanks: Casey Lock, Cinequipt, Sapphire The Horse, The LaVine Family, The Tomas Family",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=YGhLl_61Pzs",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1V5dbAtRKRhhLmJq2LsV0HCX8cTZKrzwn/view",
-	// 	notes: "",
-	// },
-	// {
-	// 	client: "Tenci\nKeeled Scales Records",
-	// 	mainPageActive: false,
-	// 	title: "Serpent",
-	// 	year: "2020",
-	// 	credits:
-	// 		"Directed and Edited by: John TerEick\nDirector of Photography: Ariel Pomerantz\nThanks: Tina Scarpello, Danny Kutnink, Belle's Bagels, The City of Angels, Alex Pomerantz",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=nqY0H3lsrEs",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1pXAdA0CjrtPCgZ3X7zoLtCTWSPQL6dyn/view",
-	// 	notes: "",
-	// },
+	{
+		client: "Tenci\nKeeled Scales Records",
+		mainPageActive: false,
+		title: "Forgot My Horses Name",
+		year: "2020",
+		credits:
+			"Directed by: coool (John TerEick and Jake Nokovic) \nProduction Manager: Lainey Muhlberg \n\nDirector of Photography: David Hughes Jr\nFirst AC: Jacob Velander\nSecond AC: Hannah Germaine\n\nColorist: Sam Howells\nTitle Design: Kenyon Elsworth\nSound Design and Mix: Andrew TerEick\n\nThanks: Casey Lock, Cinequipt, Sapphire The Horse, The LaVine Family, The Tomas Family",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=YGhLl_61Pzs",
+		stillImg:
+			"https://drive.google.com/file/d/1V5dbAtRKRhhLmJq2LsV0HCX8cTZKrzwn/view",
+		notes: "",
+	},
+	{
+		client: "Tenci\nKeeled Scales Records",
+		mainPageActive: false,
+		title: "Serpent",
+		year: "2020",
+		credits:
+			"Directed and Edited by: John TerEick\nDirector of Photography: Ariel Pomerantz\nThanks: Tina Scarpello, Danny Kutnink, Belle's Bagels, The City of Angels, Alex Pomerantz",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=nqY0H3lsrEs",
+		stillImg:
+			"https://drive.google.com/file/d/1pXAdA0CjrtPCgZ3X7zoLtCTWSPQL6dyn/view",
+		notes: "",
+	},
 	{
 		client: "Disq\nSaddle Creek Records",
 		mainPageActive: true,
@@ -309,19 +310,19 @@ const projectSeed = [
 			"https://drive.google.com/file/d/1c-GMlmngSq8NNc7ibpPgp4fYW5CsI8lN/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Fat Night\nAcrophase Records",
-	// 	mainPageActive: false,
-	// 	title: "Live For Each Other",
-	// 	year: "2020",
-	// 	credits:
-	// 		"Directed by coool (John TerEick & Jake Nokovic)\nEdited by Max Mooney\nSound design and mix by Andrew TerEick\n\nBottle design by James Edmonson (OH no Type Co)\n\nStarring:\nFat Night (Dan Hanson, Gabe Gundacker, Ted Issen, Nik Ritchie)\nWyatt Waddell\nJohn TerEick\nMiranda Elaine\nDanielle Jones\nJake Pearson\nJake Nokovic\n...and introducing Yorick",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=XzsuFBRDFhM&feature=youtu.be",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1GmL7gKw8gCp9dTJ_AFXNpNz5-9OAjl73/view",
-	// 	notes: "",
-	// },
+	{
+		client: "Fat Night\nAcrophase Records",
+		mainPageActive: false,
+		title: "Live For Each Other",
+		year: "2020",
+		credits:
+			"Directed by coool (John TerEick & Jake Nokovic)\nEdited by Max Mooney\nSound design and mix by Andrew TerEick\n\nBottle design by James Edmonson (OH no Type Co)\n\nStarring:\nFat Night (Dan Hanson, Gabe Gundacker, Ted Issen, Nik Ritchie)\nWyatt Waddell\nJohn TerEick\nMiranda Elaine\nDanielle Jones\nJake Pearson\nJake Nokovic\n...and introducing Yorick",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=XzsuFBRDFhM&feature=youtu.be",
+		stillImg:
+			"https://drive.google.com/file/d/1GmL7gKw8gCp9dTJ_AFXNpNz5-9OAjl73/view",
+		notes: "",
+	},
 	{
 		client: "Ratboys\nTopshelf Records",
 		mainPageActive: true,
@@ -335,19 +336,19 @@ const projectSeed = [
 			"https://drive.google.com/file/d/1JDhRnGMlVBJOSzDZnKqWMU_oQVO9y1jl/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Kim Tee",
-	// 	mainPageActive: false,
-	// 	title: "Too Deep",
-	// 	year: "2019",
-	// 	credits:
-	// 		"Directed by Jake Nokovic\nProduced by Lucas Anderson\n\nDirector of Photography: Spencer Nelson\n1st AC: Christian Spraungel\nGrip: Owen Seaton\n\nProduction Designer: Francine Thompson\n\nProduction Assistant: Will Tooke",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=KTTRFhZNaVE",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/105C097FgzrNMHJbq5qxmtiOXMMR1rscK/view",
-	// 	notes: "",
-	// },
+	{
+		client: "Kim Tee",
+		mainPageActive: false,
+		title: "Too Deep",
+		year: "2019",
+		credits:
+			"Directed by Jake Nokovic\nProduced by Lucas Anderson\n\nDirector of Photography: Spencer Nelson\n1st AC: Christian Spraungel\nGrip: Owen Seaton\n\nProduction Designer: Francine Thompson\n\nProduction Assistant: Will Tooke",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=KTTRFhZNaVE",
+		stillImg:
+			"https://drive.google.com/file/d/105C097FgzrNMHJbq5qxmtiOXMMR1rscK/view",
+		notes: "",
+	},
 	{
 		client: "Katie Dey\nRun For Cover Records",
 		mainPageActive: true,
@@ -374,31 +375,31 @@ const projectSeed = [
 			"https://drive.google.com/file/d/1R_aSzpAxZTo-XvX1HJNy13sv-tKuuKuC/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Fat Night\nAcrophase Records",
-	// 	mainPageActive: false,
-	// 	title: "Sweet Nothings",
-	// 	year: "2019",
-	// 	credits:
-	// 		"Directed and Produced by: John TerEick\n1st AD: Tayler Robinson\nDirector of Photography: Jake Brusha\n1st AC: Igor Cedeno\nGaffer: Josh Binder\nProduction Assistants: Katie Samuelsen, Emma Kupor\n\nChoreography: Christina Reis\nDancers: Christina Reis & Katherine Stewart\n\nVenue lighting: Maya Bauman\n\nEditor: John TerEick\nColorist: Sam Howells\n\nThanks: Rachel Lee, Sleeping Village, & Hunter Korgel",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=yINLTWJqhZo",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1tE79FQJO2vQ44IuvpoI--wmzwMt68n3C/view",
-	// 	notes: "",
-	// },
-	// {
-	// 	client: "Nike x Off-White\nPiff MPLS",
-	// 	mainPageActive: false,
-	// 	title: "",
-	// 	year: "2018",
-	// 	credits: "Directed by: Jake Nokovic\nPA: Will Tooke",
-	// 	preview: "",
-	// 	fullVideo: "https://vimeo.com/363653604",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1Ol-9i7E_9f1ylT_DZaPACYb4shj1t16u/view",
-	// 	notes: "",
-	// },
+	{
+		client: "Fat Night\nAcrophase Records",
+		mainPageActive: false,
+		title: "Sweet Nothings",
+		year: "2019",
+		credits:
+			"Directed and Produced by: John TerEick\n1st AD: Tayler Robinson\nDirector of Photography: Jake Brusha\n1st AC: Igor Cedeno\nGaffer: Josh Binder\nProduction Assistants: Katie Samuelsen, Emma Kupor\n\nChoreography: Christina Reis\nDancers: Christina Reis & Katherine Stewart\n\nVenue lighting: Maya Bauman\n\nEditor: John TerEick\nColorist: Sam Howells\n\nThanks: Rachel Lee, Sleeping Village, & Hunter Korgel",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=yINLTWJqhZo",
+		stillImg:
+			"https://drive.google.com/file/d/1tE79FQJO2vQ44IuvpoI--wmzwMt68n3C/view",
+		notes: "",
+	},
+	{
+		client: "Nike x Off-White\nPiff MPLS",
+		mainPageActive: false,
+		title: "",
+		year: "2018",
+		credits: "Directed by: Jake Nokovic\nPA: Will Tooke",
+		preview: "",
+		fullVideo: "https://vimeo.com/363653604",
+		stillImg:
+			"https://drive.google.com/file/d/1Ol-9i7E_9f1ylT_DZaPACYb4shj1t16u/view",
+		notes: "",
+	},
 	{
 		client: "Muerte's Death",
 		mainPageActive: true,
@@ -407,7 +408,8 @@ const projectSeed = [
 		credits:
 			"Directed by: coool\nDir. of Photography: Jake Brusha\nProducer: Donny",
 		preview: "https://player.vimeo.com/video/722579233?h=bc23b206c9",
-		fullVideo: "https://player.vimeo.com/video/362910525?h=9b4df0fbf9&title=0&byline=0&portrait=0&autoplay=1&loop=1",
+		fullVideo:
+			"https://player.vimeo.com/video/362910525?h=9b4df0fbf9&title=0&byline=0&portrait=0&autoplay=1&loop=1",
 		stillImg:
 			"https://drive.google.com/file/d/1gCaE-Yc7H3CkJqzZ0f6RLFuNmUObCB9Y/preview",
 		notes: "",
@@ -425,45 +427,45 @@ const projectSeed = [
 			"https://drive.google.com/file/d/1KbkxYch8_oLS8EipvGK5E-sfqyZ1stOj/preview",
 		notes: "",
 	},
-	// {
-	// 	client: "Space Gators",
-	// 	mainPageActive: false,
-	// 	title: "Is it Right? Is it Wrong?",
-	// 	year: "2018",
-	// 	credits:
-	// 		"Directed by: coool \nDirector of Photography: Jake Brusha\nEditor: John TerEick\nColorist: Jacob McKee @ The Mill Chicago\nTalent: Jon Levert\nAC: Hannah Germaine\nGaffer / Grip: JT Klingenmeier\nProduction Assistants:\nEditor: John TerEick\nColor: The Mill Chicago\nColorist: Jacob McKee\nColor Producer: Dan Butler\nSound Designer & Mixer: Ryan Deffet\nArt Director: Brian Hedrick\nAnimation: Jason Noir",
-	// 	preview: "",
-	// 	fullVideo: "https://www.youtube.com/watch?v=npqsHq-m6ww",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1C2YHXby8s0o36fosAUrBMAVz1rcpKOFn/view",
-	// 	notes: "",
-	// },
-	// {
-	// 	client: "La Croix",
-	// 	mainPageActive: false,
-	// 	title: "Crying",
-	// 	year: "2019",
-	// 	credits:
-	// 		"Directed by: coool\nCinematographer: Joe McNairy\nArt director: Kayleigh O'brien\nCopywriter: Bobby Kuhn\nColourist: Lindsey Mazur\nDigital Intermediate: The Mill Chicago\nAnimator: Carolina Lopez\nThanks: Cinequipt, Greenhouse",
-	// 	preview: "",
-	// 	fullVideo: "https://vimeo.com/362910551",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/1e6BiJmUvcvKRGrcGrJywPeDA2H53VCku/view",
-	// 	notes: "",
-	// },
-	// {
-	// 	client: "REI",
-	// 	mainPageActive: false,
-	// 	title: "Two of Us",
-	// 	year: "2018",
-	// 	credits:
-	// 		"Directed by: coool\nCinematographer: Joe McNairy\nAC: spencer nelson\nSound Design / Mix: A.J. Olstad\nColorist: Lindsey Mazur\nThanks: Matthew Berglund, Cinequipt, Pixel Farm, Noisefloor, The Tomas Family",
-	// 	preview: "",
-	// 	fullVideo: "https://vimeo.com/362909701",
-	// 	stillImg:
-	// 		"https://drive.google.com/file/d/180mkTlV2-8Lz7BNfCc84cA4qe8umTaAK/view",
-	// 	notes: "",
-	// },
+	{
+		client: "Space Gators",
+		mainPageActive: false,
+		title: "Is it Right? Is it Wrong?",
+		year: "2018",
+		credits:
+			"Directed by: coool \nDirector of Photography: Jake Brusha\nEditor: John TerEick\nColorist: Jacob McKee @ The Mill Chicago\nTalent: Jon Levert\nAC: Hannah Germaine\nGaffer / Grip: JT Klingenmeier\nProduction Assistants:\nEditor: John TerEick\nColor: The Mill Chicago\nColorist: Jacob McKee\nColor Producer: Dan Butler\nSound Designer & Mixer: Ryan Deffet\nArt Director: Brian Hedrick\nAnimation: Jason Noir",
+		preview: "",
+		fullVideo: "https://www.youtube.com/watch?v=npqsHq-m6ww",
+		stillImg:
+			"https://drive.google.com/file/d/1C2YHXby8s0o36fosAUrBMAVz1rcpKOFn/view",
+		notes: "",
+	},
+	{
+		client: "La Croix",
+		mainPageActive: false,
+		title: "Crying",
+		year: "2019",
+		credits:
+			"Directed by: coool\nCinematographer: Joe McNairy\nArt director: Kayleigh O'brien\nCopywriter: Bobby Kuhn\nColourist: Lindsey Mazur\nDigital Intermediate: The Mill Chicago\nAnimator: Carolina Lopez\nThanks: Cinequipt, Greenhouse",
+		preview: "",
+		fullVideo: "https://vimeo.com/362910551",
+		stillImg:
+			"https://drive.google.com/file/d/1e6BiJmUvcvKRGrcGrJywPeDA2H53VCku/view",
+		notes: "",
+	},
+	{
+		client: "REI",
+		mainPageActive: false,
+		title: "Two of Us",
+		year: "2018",
+		credits:
+			"Directed by: coool\nCinematographer: Joe McNairy\nAC: spencer nelson\nSound Design / Mix: A.J. Olstad\nColorist: Lindsey Mazur\nThanks: Matthew Berglund, Cinequipt, Pixel Farm, Noisefloor, The Tomas Family",
+		preview: "",
+		fullVideo: "https://vimeo.com/362909701",
+		stillImg:
+			"https://drive.google.com/file/d/180mkTlV2-8Lz7BNfCc84cA4qe8umTaAK/view",
+		notes: "",
+	},
 	// {
 	// 	client: "",
 	//  mainPageActive: false,
