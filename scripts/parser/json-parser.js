@@ -43,19 +43,61 @@ async function jsonParseToArray() {
 	jsonTest.forEach((project) => {
 		for (let key in project) {
 			if (key === "credits") {
-				creditParse(project[key]);
+				creditParse(project[key], 2);
 			}
 		}
 	});
 }
 
-async function creditParse(credits) {
+async function creditParse(credits, columnDecider) {
 	//Splits every credit line into a different index
 	const creditArray = credits.split("\n");
 
-	//testing whats in the array
-	for (let i = 0; i < creditArray.length; i++) {
-		console.log("testing credit array: " + creditArray[i]);
+	const creditArrDivider = Math.round(creditArray.length / 3);
+
+	const creditCol1Arr = [];
+	const creditCol2Arr = [];
+	const creditCol3Arr = [];
+
+	console.log(`CreditArrary length is: ${creditArray.length}`);
+	console.log(`CreditArrDivider is: ${creditArrDivider}`);
+
+	//if credits are less than 9 lines, put all credits in first column
+	//if credits are greater than or equal to 9, divide credits by 3 and return based on column is called
+	//return empty else
+	if (creditArray.length < 9 && columnDecider === 1) {
+		return creditArray;
+	} else if (creditArray.length >= 9) {
+		for (let i = 0; i < creditArray.length; i++) {
+			if (i < creditArrDivider) {
+				creditCol1Arr[i] = creditArray[i];
+				console.log("testing creditCol1Arr: " + creditCol1Arr[i]);
+			} else if (i >= creditArrDivider && i < creditArrDivider * 2) {
+				creditCol2Arr[i] = creditArray[i];
+				console.log("testing creditCol2Arr: " + creditCol2Arr[i]);
+			} else {
+				creditCol3Arr[i] = creditArray[i];
+				console.log("testing creditCol3Arr: " + creditCol3Arr[i]);
+			}
+		}
+
+		if (columnDecider === 1) {
+			console.log("TESTING CREDCOL1ARR: " + creditCol1Arr);
+			console.log("END OF CREDIT PARSE 1");
+			return creditCol1Arr;
+		}
+		if (columnDecider === 2) {
+			console.log("TESTING CREDCOL2ARR: " + creditCol1Arr);
+			console.log("END OF CREDIT PARSE 2");
+			return creditCol2Arr;
+		}
+		if (columnDecider === 3) {
+			console.log("TESTING CREDCOL3ARR: " + creditCol1Arr);
+			console.log("END OF CREDIT PARSE 3");
+			return creditCol3Arr;
+		}
+	} else {
+		return;
 	}
-	console.log("END OF CREDIT PARSE");
+	console.log("END OF CREDIT PARSE EMPTY RETURN");
 }

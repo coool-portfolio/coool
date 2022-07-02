@@ -303,7 +303,8 @@ const projectSeed = [
 		mainPageActive: true,
 		title: "Loneliness",
 		year: "2020",
-		credits: "",
+		credits:
+			"Directed by: coool (Jake Nokovic + John TerEick)\n\nProducer: Lainey Muhlberg\nExecutive Producer: Casey Lock\n1st AD: Phil Evans\nProduction Company: Method and Madness\n\nDirector of Photography: David Hughes Jr\n1st AC: Andrew Chapman\nGaffer: Jacob Joiner\nGrips: Gary Walker, Josh Bloome\nProjection Photography: Hannah Germaine\n\nProduction Designer: Dae Gonzalez\nCostumer: Dae Gonzalez\nProduction Assistants: Alyssa Coyle\nAV Technician: Joey Valdivia\n\nEditor: Max Mooney\nColor: Optimus\nColorist: Kalvin Johnson\nColor Producer: Brad Martin\nTitle Design: Caleb Vanden Boom\n\nStarring: Isaac de Broux-Slone, Raina Bock, Logan Severson, Shannon Connor, Brendan Manley, Joette Waters, Sandy Gulliver, Sharon Kluge, Denis Mulvihill, Blythe Bauer, Ric Morgan, Sandra Baskin, Steve Pavlik, Ron Beecher, Harry Holm\n\nThanks: Harry Holm, Joe’s Snowmobiles, Hannah Germaine, Paula Tomas, Joe Tomas, Terek Tomas, Kenyon Elsworth, Jeff Tafolla, Michael Crino, Patrick Burke, Ross Zuchowski, Whitehouse Post, Atlas Lighting Chicago, Sultan’s Market, Ryan Deffett",
 		preview: "https://player.vimeo.com/video/722579545?h=a7b8d5b7ae",
 		fullVideo: "https://www.youtube.com/embed/SGtD82ExtAQ?autoplay=1",
 		stillImg:
