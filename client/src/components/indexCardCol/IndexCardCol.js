@@ -121,8 +121,8 @@ function IndexCardCol( {project} ) {
 
 			{/* IMG */}
 			<figure className='image column is-6'>
-				{/* <img src={project.img} alt={project.client} className='card-img right column' /> */}
-				<iframe width="640" height="480" className='card-img right column' title={project.title} src={project.stillImg} alt={project.title + ' image'} frameBorder={0} scrolling="no" seamless=""></iframe>
+				<img title={project.title} src={project.stillImg} alt={project.title + ' image'} className='card-img right column' />
+				{/* <iframe width="640" height="480" className='card-img right column' title={project.title} src={project.stillImg} alt={project.title + ' image'} frameBorder={0} scrolling="no" seamless=""></iframe> */}
 			</figure>
 		</div>
 	);
