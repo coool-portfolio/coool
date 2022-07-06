@@ -1,50 +1,79 @@
 .cardContainer {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	width: 100%;
 	height: auto;
 	border-bottom: 2px solid black;
 	margin-top: 20px;
 }
 
+.cardCol {
+	margin-bottom: 20px;
+	width: 100%;
+	height: 100%;
+}
+
 .project {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
 	padding: 6px 0 0 18px;
-	margin-bottom: 50px;
+	margin-bottom: 4vw;
 }
 
 h2 {
-	font-size: 37px;
+	width: 100%;
+	display: block;
+	font-size: 2.35vw;
 	font-weight: 600;
 	color: black;
 }
 
 h5 {
+	width: 100%;
+	display: block;
 	font-size: 18px;
 	color: rgb(116, 116, 116);
 }
 
 .info {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 
 .info p {
-	padding: 2px 0 0 18px;
+	bottom: 0;
+	padding: 2px 0 5px 18px;
 	font-size: 13px;
 	line-height: 1em;
 	color: rgb(116, 116, 116);
 }
 
+.third {
+	padding-right: 50px;
+}
+
 figure {
-	background-position: center;
-	background-size: cover;
+	display: flex;
 	position: relative;
 	margin: 0;
 	height: auto;
 	background-color: transparent;
+	width: 100%;
+    height: 100%;
+}
+
+img {
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+	margin-bottom: 20px;
+	padding: 0;
 }
 
 iframe {
-	background-color: transparent;
+	width: 100%;
+    height: 500px;
 }
 
 /* XL */
@@ -54,7 +83,7 @@ iframe {
 
 /* LG */
 @media only screen and (max-width: 1024px) {
-	
+
 }
 
 /* MD/SM */
@@ -62,6 +91,7 @@ iframe {
     .cardContainer {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		width: 100%;
 		height: auto;
 	}
@@ -74,4 +104,22 @@ iframe {
 	.info {
 		margin-bottom: 10px;
 	}
+
+	h2 {
+		font-size: 28px;
+		margin: 10px 0 20px 0;
+	}
+
+	.cardCol {
+		margin-bottom: 15px;
+	}
+
+	.image {
+		margin-left: 20px;
+	}
+
+	.image, .column {
+		padding: 0;
+	}
+	
 }

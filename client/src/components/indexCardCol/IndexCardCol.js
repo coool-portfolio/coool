@@ -1,35 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import "./indexCardCol.css";
 
 function IndexCardCol({ project }) {
-	function creditParse(credits, columnDecider) {
-		//Splits every credit line into a different index
-		const creditArray = credits.split("\n");
+	const [showVideo, setShowVideo] = useState(false);
+	// returns first half of client
+	const client = project.client.split("\n").shift()
+	
+	// ARRAY PARSE
+	const creditArray = project.credits.split("\n");
+	// divides array into 3 parts
+	const creditArrDivider = Math.floor(creditArray.length / 3);
+	// creates arrays for each 3 columns
+	const creditCol1Arr = [];
+	const creditCol2Arr = [];
+	const creditCol3Arr = [];
 
-		const creditArrDivider = creditArray.length / 3;
-
-		const creditCol1Arr = [];
-		const creditCol2Arr = [];
-		const creditCol3Arr = [];
-
-		//testing whats in the array
-		for (let i = 0; i < creditArray.length; i++) {
-			console.log("testing credit array: " + creditArray[i]);
+	// pushes elements into each array by each third
+	for (let i = 0; i < creditArray.length; i++) {
+		if (i <= creditArrDivider) {
+			creditCol1Arr.push(creditArray[i])
+		} else if (i >= creditArrDivider && i <= (creditArray.length - creditArrDivider)) {
+			creditCol2Arr.push(creditArray[i])
+		} else {
+			creditCol3Arr.push(creditArray[i])
 		}
-		console.log("END OF CREDIT PARSE");
+	}
+	// random key for unique key error
+	function getRandomKey() {
+		return Math.random().toString(36).replace('0.',Date.now()).slice(10,25)
 	}
 
 	return (
-		<div className='cardContainer'>
+		<div id={project._id} className='cardContainer'>
 			{/* CLIENT */}
 			<div className='is-2 cardCol column'>
 				<div className='project'>
 					<h5>Client</h5>
-					<h2>{project.client}</h2>
+					<h2>{client}</h2>
 				</div>
 
 				<div className='info'>
-					<p>{project.credits}</p>
+					{creditCol1Arr.map((credit, i) => {
+						if (credit === '') {
+							return (<br key={getRandomKey()} />)
+						} else {
+							return (<p key={getRandomKey()}>{credit}</p>)
+						}
+					})}
 				</div>
 			</div>
 
@@ -41,31 +58,53 @@ function IndexCardCol({ project }) {
 				</div>
 
 				<div className='info'>
-					<p>{project.credits}</p>
+					{creditCol2Arr.map((credit, i) => {
+						if (credit === '') {
+							return (<br key={getRandomKey()}/>)
+						} else {
+							return (<p key={getRandomKey()}>{credit}</p>)
+						}
+					})}
 				</div>
 			</div>
 
 			{/* YEAR */}
-			<div className='is-2 cardCol column'>
+			<div className='is-2 cardCol column third'>
 				<div className='project'>
 					<h5>Year</h5>
 					<h2>{project.year}</h2>
 				</div>
 
 				<div className='info'>
-					<p>{project.credits}</p>
+					{creditCol3Arr.map((credit, i) => {
+						if (credit === '') {
+							return (<br key={getRandomKey()}/>)
+						} else {
+							return (<p key={getRandomKey()}>{credit}</p>)
+						}
+					})}
 				</div>
 			</div>
 
 			{/* IMG */}
 			<figure className='image column is-6'>
-				<img
-					title={project.title}
-					src={project.stillImg}
-					alt={project.title + " image"}
-					className='card-img right column'
-				/>
-				{/* <iframe width="640" height="480" className='card-img right column' title={project.title} src={project.stillImg} alt={project.title + ' image'} frameBorder={0} scrolling="no" seamless=""></iframe> */}
+				{!showVideo ?
+					<img
+						onClick={() => setShowVideo(true)}
+						title={project.title}
+						src={project.stillImg}
+						alt={project.title + " image"}
+						className='card-img right column'
+					/>
+					:
+					<iframe
+						preload="metadata"
+						className="card-img right column"
+						title={project.title} src={project.fullVideo}
+						allow="autoplay; fullscreen"
+						frameBorder={0} >
+					</iframe>
+				}
 			</figure>
 		</div>
 	);
