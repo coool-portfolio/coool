@@ -2,12 +2,49 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	font-family: gtpressura;
 	width: 100%;
 	margin: 0;
 	border-top: 2px solid black;
 	margin-top: 90px;
+	position: relative;
+}
+
+/* ARROWS */
+.arrow-down {
+	display: inline block;
+    border: none;
+    border-radius: 2px;
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 6;
+    height: 60px;
+    width: 60px;
+    padding: 0;
+	color: rgba(0, 0, 0, 0.507);
+    margin: 20px;
+	bottom: 0;
+	position: fixed;
+}
+
+.arrow-down:hover {
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.arrow-down svg {
+    margin: 0;
+    background-color: rgba(173, 173, 173, 0.527);
+	/* border: 2px solid black; */
+    border-radius: 2px;
+	height: 60px;
+    width: 60px;
+}
+
+.end {
+	margin-left: 150px;
 }
 
 /* XL */
@@ -24,5 +61,16 @@
 @media only screen and (max-width: 768px) {
     .index {
 		margin-top: 75px;
+		justify-content: space-evenly;
+	}
+
+	.arrow-down{
+		width: 100vw;
+	}
+
+	.end{
+		margin: 20px;
+		display: flex;
+		justify-content: flex-end;
 	}
 }

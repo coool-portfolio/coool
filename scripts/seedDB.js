@@ -54,7 +54,7 @@ const projectSeed = [
 		title: "Portraits of Men Crying",
 		year: "2021",
 		credits:
-			"Directed by coool (John TerEick and Jake Nokovic)\n\nDirector of Photography\nDavid Hughes Jr.\n\nEditor Max Mooney\n\nArt Direction and Design\nBrian Hedrick\n\nColorist\nSam Howells\n\nSound Design and Mix\nAndrew TerEick\n\nBilly Hoffman\n\nJamaal Harris\n\nRyan Nolen\n\nJohn TerEick\n\nTravis Delgado\n\nJames Sisto\n\nSteve Pavlik\n\nOriginal Score\nAndrew TerEick\n\nAdditional Photography\nGarret Justus\n\nThanks\nLainey Muhlberg",
+			"Directed by coool (John TerEick and Jake Nokovic)\n\nDirector of Photography\nDavid Hughes Jr.\n\nEditor Max Mooney\n\nArt Direction and Design\nBrian Hedrick\n\nColorist: Sam Howells\nSound Design and Mix\nAndrew TerEick\n\nBilly Hoffman\nJamaal Harris\nRyan Nolen\nJohn TerEick\nTravis Delgado\nJames Sisto\nSteve Pavlik\n\nOriginal Score\nAndrew TerEick\n\nAdditional Photography\nGarret Justus\n\nThanks\nLainey Muhlberg",
 		preview: "https://player.vimeo.com/video/722578866?h=8c8e8f3648",
 		fullVideo:
 			"https://player.vimeo.com/video/546246624?h=396eb1378e&title=0&byline=0&portrait=0&autoplay=1&loop=1",
@@ -133,7 +133,7 @@ const projectSeed = [
 		title: "2021: A Personal Space Odyssey",
 		year: "2021",
 		credits:
-			"Directed, Produced and Edited by: John TerEick (itscoool.com)\nDirector of Photography: David Hughes Jr\nGaffer: Carlos Cabrera-Mayol\nColorist: David Hughes Jr.\nThanks: Poste Golden, Future Use Studio, Asian Man Records, SCLTD, No Ear Buds, and You!",
+			"Directed, Produced and Edited by: John TerEick (itscoool.com)\n\nDirector of Photography: David Hughes Jr\nGaffer: Carlos Cabrera-Mayol\nColorist: David Hughes Jr.\nThanks: Poste Golden, Future Use Studio, Asian Man Records, SCLTD, No Ear Buds, and You!",
 		preview: "https://player.vimeo.com/video/722579118?h=c4e0c70e9d",
 		fullVideo: "https://www.youtube.com/embed/B2nXcWyBYdE?autoplay=1",
 		stillImg:

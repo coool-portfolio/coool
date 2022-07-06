@@ -62,10 +62,7 @@ function App() {
 						setModal={setModal} />} />
 				<Route path='/index'
 					element={<Index
-						location={location}
 						projects={projects}
-						setProjects={setProjects}
-						loadProjects={loadProjects}
 						status={status} />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/project' element={<Project />} />
