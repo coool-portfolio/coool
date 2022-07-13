@@ -7,5 +7,5 @@ module.exports = function(app) {
       target: 'https://coool-website.herokuapp.com/',
       changeOrigin: true,
     })
-  );
+  )
 };
