@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-const { insertMany } = require("../models/Project");
+const { insertMany } = require("../models/project");
 
 mongoose.connect(
 	process.env.MONGODB_URI || "mongodb://localhost/cooolprojects",
@@ -483,7 +483,7 @@ const projectSeed = [
 db.Project.deleteMany({})
 	.then(() => db.Project.collection.insertMany(projectSeed))
 	.then((data) => {
-		console.log(data.result + " records inserted");
+		console.log(data.insertedCount + " records inserted");
 		process.exit(0);
 	})
 	.catch((err) => {
