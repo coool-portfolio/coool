@@ -1,3 +1,3 @@
-const Project = require('./Project');
+const Project = require('./project');
 
 module.exports = { Project };
