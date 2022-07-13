@@ -12,7 +12,7 @@
 }
 
 /* ARROWS */
-.arrow-down {
+button.arrow-down {
 	display: inline block;
     border: none;
     border-radius: 2px;
@@ -43,7 +43,7 @@
     width: 60px;
 }
 
-.end {
+button.end {
 	margin-left: 150px;
 }
 
