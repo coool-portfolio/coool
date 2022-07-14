@@ -54,6 +54,16 @@ h2 {
     padding: 0;
 }
 
+figure.image img {
+    margin: 0;
+}
+
+div.form.column {
+    padding-left: 50px;
+    margin: 0;
+    width: 55vw;
+}
+
 /* XL */
 @media only screen and (max-width: 1280px) {
     .header {
@@ -73,8 +83,8 @@ h2 {
         text-align: center;
     }
 
-    .form {
-        margin: 0;
+    div.form.column {
+        padding-left: 20px;
     }
 }
 
@@ -94,6 +104,23 @@ h2 {
     }
 
     .image {
-        transform: scale(0.95);
+        transform: scale(0.90);
+    }
+
+    figure.image {
+        margin: 0;
+    }
+
+    div.form.column {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        width: 100vw;
+        padding: 0;
+    }
+
+    div.field, div.notification {
+        width: 90vw;
     }
 }

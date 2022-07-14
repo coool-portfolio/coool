@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./contact.css";
-// import ProfileImg from "../assets/images/coool_sitepics.png"
+import ProfileImg from "../assets/images/coool_sitepics.png"
 
 function Contact() {
 	const [toSend, setToSend] = useState({
@@ -65,7 +65,9 @@ function Contact() {
 					<img
 						className=""
 						alt="coool pic"
-						src="https://user-images.githubusercontent.com/89707381/176979498-a7e2ad75-c04f-4f07-a8cf-a9f1f23da091.jpg" />
+						src={ProfileImg}
+						// src="https://user-images.githubusercontent.com/89707381/176979498-a7e2ad75-c04f-4f07-a8cf-a9f1f23da091.jpg"
+						 />
 				</figure>
 			</div>
 
