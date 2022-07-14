@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import IndexCardCol from "../indexCardCol/IndexCardCol";
 import "./indexCard.css";
 
@@ -6,10 +6,19 @@ function IndexCard({ projects }) {
 	const [index, setIndex] = useState(5);
 	const [showDownBtn, setshowDownBtn] = useState(true);
 	const [toEndBtn, setToEndBtn] = useState(false);
-	const [loadedProjects, setLoadedProjects] = useState(projects.map(project => project._id));
+	
+	// if page refreshes, reset page scrolled to top
+	useEffect(() => {
+		setIndex(5)
+		window.onbeforeunload = function () {
+			window.scrollTo(0, 0);
+		}
+		setshowDownBtn(true)
+	}, [])
 
 	// watches scrolling
 	window.onscroll = function () {
+		console.log(window.pageYOffset)
 		// add 5 more project when scrolled down to 5
 		if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
 			setTimeout(() => {
@@ -20,18 +29,25 @@ function IndexCard({ projects }) {
 		} else if (window.pageYOffset <= 1600) {
 			setIndex(5)
 		}
-		// showing JUMP TO EACH PROJECT BTN
-		if (window.pageYOffset > document.body.scrollHeight - 1250) {
+		// showing JUMP TO TOP BTN
+		if (index >= 17) {
 			setshowDownBtn(false)
-			setLoadedProjects(projects.map(project => project._id))
-		} else {
-			setshowDownBtn(true)
 		}
 		// showing JUMP TO END BTN 
-		if (window.pageYOffset > 1200 && window.pageYOffset < 8000) {
-			setToEndBtn(true)
+		// for mobile
+		if (window.innerWidth <= 768) {
+			if (window.pageYOffset > 1200 && window.pageYOffset < 18500) {
+				setToEndBtn(true)
+			} else {
+				setToEndBtn(false)
+			}
 		} else {
-			setToEndBtn(false)
+			// for desktop
+			if (window.pageYOffset > 1200 && window.pageYOffset < 8000) {
+				setToEndBtn(true)
+			} else {
+				setToEndBtn(false)
+			}
 		}
 	};
 
@@ -40,33 +56,35 @@ function IndexCard({ projects }) {
 		event.preventDefault()
 		// adding 1 more project after each click
 		setIndex(index + 1)
-
-		// jumping to the next project by it's id if not scrolled to far down
-		if (window.pageYOffset <= 500) {
-			const card = document.getElementById(loadedProjects.shift());
-			card.scrollIntoView(true)
-		} else {
-			document.documentElement.scrollTop += 600
-		}
+		// scrolling page down a little
+		document.documentElement.scrollTop += 600
 	}
 	// scrolls back to TOP
 	function scrollTop(event) {
 		event.preventDefault()
+		// resets page
 		setIndex(5)
 		window.scrollTo(0, 0);
+		setshowDownBtn(true)
 	}
 	// scrolls to END
-	function endScroll(event) {
+	function scrollEnd(event) {
 		event.preventDefault()
-		setIndex(projects.length)
-		window.scrollTo(0, document.body.scrollHeight);
+		setTimeout(() => {
+			// shows all projects
+			setIndex(projects.length)
+			// scrolling to bottom of page
+			window.scrollTo(0, document.body.scrollHeight);
+			// showing JUMP TO TOP BTN
+			setshowDownBtn(false)
+		}, 250)
 	}
 
 	return (
 		<div className='index columns is-desktop'>
 			<>
 				{/* filters and maps based on index */}
-				{projects.filter((credit, i) => i < index).map((project, i) => (
+				{projects.filter((credit, i) => i <= index).map((project, i) => (
 					<IndexCardCol key={Math.floor(Math.random() * 1000)} project={project} />
 				))}
 			</>
@@ -91,7 +109,7 @@ function IndexCard({ projects }) {
 					{/* ARROW TO LAST PROJECT */}
 					{toEndBtn &&
 						<button
-							onClick={endScroll}
+							onClick={scrollEnd}
 							className="arrow-down end"
 							aria-label="Bottom Scroll Button">
 							<svg

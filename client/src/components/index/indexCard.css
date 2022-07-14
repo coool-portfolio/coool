@@ -64,13 +64,11 @@ button.end {
 		justify-content: space-evenly;
 	}
 
-	.arrow-down{
+	.arrow-down {
 		width: 100vw;
 	}
 
-	.end{
-		margin: 20px;
-		display: flex;
-		justify-content: flex-end;
+	button.end {
+		margin-left: 80vw;
 	}
 }
