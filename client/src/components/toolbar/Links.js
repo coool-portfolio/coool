@@ -17,36 +17,45 @@ function Links({ preview, setPreview, current, setCurrent, location, setLocation
         // delayed preview fade in
         setTimeout(() => {
             setDelay(true)
-        }, 1000)
+        }, 1800)
     }, [setPreview, location]);
 
     // links appear after a beat
     useEffect(() => {
+        // let index = document.getElementById("index")
+        // let contact = document.getElementById("contact")
+        let links = document.querySelector(".links")
+        let toolbar = document.querySelector(".toolbar")
+
         if (window.location.pathname === '/') {
             // making the index and contact links disappear and reappear
-            let index = document.getElementById("index")
-            index.style.display = "none"
-            let contact = document.getElementById("contact")
-            contact.style.display = "none"
+            // index.style.display = "none"
+            // contact.style.display = "none"
+            links.style.display = "none"
+            // setTimeout(() => {
+                // index.style.display = "flex"
+                // contact.style.display = "flex"
+                // links.style.justifyContent = "space-between"
+            // }, 2700)
+            // delays showing links
             setTimeout(() => {
-                index.style.display = "flex"
-                contact.style.display = "flex"
-                center.style.justifyContent = "space-between"
-            }, 2700)
-    
-            // adjusting "Preview" centering when links are added
-            let center = document.querySelector(".links")
-            center.style.justifyContent = "center"
-            setTimeout(() => {
-                let prevContainer = document.getElementById("prev")
-                prevContainer.style.marginRight = "32.5px"
+                links.style.display = "flex"
             }, 1000)
-            setTimeout(() => {
-                let prevContainer = document.getElementById("prev")
-                prevContainer.style.marginRight = "0"
-            }, 2700)
+    
+            // adjusting "Preview" linksing when links are added
+            // links.style.justifyContent = "links"
+            // setTimeout(() => {
+            //     let prevContainer = document.getElementById("prev")
+            //     prevContainer.style.marginRight = "32.5px"
+            // }, 1000)
+            // setTimeout(() => {
+            //     let prevContainer = document.getElementById("prev")
+            //     prevContainer.style.marginRight = "0"
+            // }, 2700)
         } else {
-            document.querySelector(".links").style.justifyContent = "space-between"
+            // links.style.justifyContent = "space-between"
+            links.style.animation = "none"
+            toolbar.style.animation = "none"
         }
     }, [])
  

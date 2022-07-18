@@ -2,15 +2,22 @@ footer {
     font-family: gtpressura;
     display: flex;
     justify-content: center;
-    font-weight: 600;
-    font-size: 22px;
+    font-weight: 500;
+    font-size: 26px;
     width: 100vw;
     height: 75px;
     position: absolute;
-    bottom: 0;
+    bottom: 350px;
     padding: 0 50px;
     letter-spacing: 0.1rem;
     color: black;
+    text-align: center;
+    animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .preview {
@@ -53,7 +60,9 @@ footer {
         font-size: 18px;
         height: 80px;
         padding: 0 20px;
-        margin-bottom: 20px;
+        margin-bottom: 20px; 
+        bottom: 0;
+        font-weight: 600;
     }
 
     .loading-animation {

@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     width: 100vw;
     margin: 0;
+    animation: fadeIn ease 2s;
 }
 
 /* COOOL ANIMATION */
@@ -92,10 +93,12 @@ button {
     color: rgba(0, 0, 0, 0.74);
 }
 
-svg {
+.arrow svg {
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.123);
+    /* background-color: rgba(0, 0, 0, 0.123); */
+    background-color: transparent;
     border-radius: 2px;
+    animation: arrow-horizontal 1s both infinite;
 }
 
 .right {
@@ -110,6 +113,12 @@ svg {
     0% { transform: translateY(0); }
     50% { transform: translateY(-0.3em); }
     100% { transform: translateY(0); }
+} 
+
+@keyframes arrow-horizontal {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-0.2em); }
+    100% { transform: translateX(0); }
 } 
 
 @keyframes fadeIn {
@@ -138,6 +147,8 @@ hr {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    animation: fadeIn ease 2s;
+    justify-content: space-between;
 }
 
 .current-link {
@@ -187,7 +198,7 @@ p {
 
 .preview-container {
     display: flex;
-    animation: fadeIn ease 2s;
+    animation: fadeIn ease 1s;
 }
 
 /* XL */
