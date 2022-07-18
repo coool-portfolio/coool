@@ -49,6 +49,7 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 		} else {
 			setShowAnimation(false)
 			setRight(false)
+			document.querySelector(".coool").style.color = "black"
 		}
 	}, [location]);
 
@@ -65,6 +66,10 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 
 	useEffect(() => {
 		setChange(current)
+
+		if (current) {
+			document.querySelector(".coool").style.color = "#b2b2b2"
+		}
 	}, [current]);
 
 	// sets arrows true or false depending on the width
@@ -129,20 +134,22 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 			preview: preview,
 		});
 
+		console.log(current)
+		// setting the current hovered on "O" to black
+		document.getElementById(preview).style.color = "black"
 
-		// setting the current hovered on "O" to gray
-		document.getElementById(preview).style.color = "gray"
-		// setting the previous watched "O" to a random color
+		// setting the previous watched "O" to back to gray
 		if (change === null) {
-			document.getElementById(preview).style.color = "gray"
+			document.getElementById(preview).style.color = "black"
 		} else if (change.preview !== preview) {
-			document.getElementById(change.preview).style.color = generateRandomColor()
+			// document.getElementById(change.preview).style.color = generateRandomColor()
+			document.getElementById(change.preview).style.color = "#b2b2b2"
 		}
 	};
 	// gets a random color
-	const generateRandomColor = () => {
-		return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0').toUpperCase();
-	}
+	// const generateRandomColor = () => {
+	// 	return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0').toUpperCase();
+	// }
 
 	const openModal = (event) => {
 		event.preventDefault();
@@ -212,6 +219,8 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 												O
 											</div>
 										))}
+										{/* Filler O's if screen is XXXL */}
+										{window.innerWidth >= 1980 && <div>OO</div>}
 									</>
 									:
 									<>
@@ -227,6 +236,8 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 												O
 											</div>
 										))}
+										{/* Filler O's if screen is XXXL */}
+										{window.innerWidth >= 1980 && <div>OO</div>}
 									</>
 								}
 							</div>
@@ -244,7 +255,9 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 				}
 			</div>
 
-			<hr />
+			{!current &&
+				<hr />
+			}
 
 			{/* NAV LINKS */}
 			<Links preview={preview} setPreview={setPreview} current={current} setCurrent={setCurrent} location={location} setLocation={setLocation} />

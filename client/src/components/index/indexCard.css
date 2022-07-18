@@ -24,19 +24,28 @@ button.arrow-down {
     height: 60px;
     width: 60px;
     padding: 0;
-	color: rgba(0, 0, 0, 0.507);
+	/* color: rgba(0, 0, 0, 0.507); */
+	color: rgba(83, 83, 83, 0.507);
     margin: 20px;
 	bottom: 0;
 	position: fixed;
+	animation: arrow-vertical 1s both infinite;
 }
 
-.arrow-down:hover {
-    color: rgba(0, 0, 0, 0.74);
+@keyframes arrow-vertical {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-0.3em); }
+    100% { transform: translateY(0); }
+} 
+
+button.arrow-down:hover {
+    color: rgba(194, 194, 194, 0.74);
 }
 
 .arrow-down svg {
     margin: 0;
-    background-color: rgba(173, 173, 173, 0.527);
+    /* background-color: rgba(173, 173, 173, 0.527); */
+    background-color: transparent;
 	/* border: 2px solid black; */
     border-radius: 2px;
 	height: 60px;

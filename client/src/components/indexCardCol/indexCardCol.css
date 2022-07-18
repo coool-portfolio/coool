@@ -28,6 +28,7 @@ h2 {
 	font-size: 2.35vw;
 	font-weight: 600;
 	color: black;
+	letter-spacing: 0.07rem;
 }
 
 h5 {
@@ -35,6 +36,7 @@ h5 {
 	display: block;
 	font-size: 18px;
 	color: rgb(116, 116, 116);
+	letter-spacing: 0.05rem;
 }
 
 .info {
