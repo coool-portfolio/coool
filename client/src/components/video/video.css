@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 6;
 }
 
 .video-modal {
@@ -11,6 +12,42 @@
     width: 100%;
     height: 100%;
     animation: scale linear 0.5s;
+}
+
+/* LOADING */
+.loading-still {
+    z-index: 0;
+}
+
+.loading-animation {
+    font-family: gtpressura;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    z-index: 4;
+    margin: 0;
+    top: 25vw;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    animation: wobble 2s both infinite;
+}
+
+.letter {
+    display: inline;
+}
+
+.loading-o {
+    width: 4.95rem;
+    margin: 0;
+}
+
+@keyframes wobble {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-0.5em); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes scale {

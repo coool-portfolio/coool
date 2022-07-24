@@ -12,7 +12,7 @@ module.exports = {
 	},
 	// get all project links
 	getProjectLinks(req, res) {
-		Project.find({ mainPageActive: true }, ["title", "fullVideo", "preview"])
+		Project.find({ mainPageActive: true }, ["title", "fullVideo", "preview", "stillImg"])
 			.then((projects) => res.json(projects))
 			.catch((err) => {
 				console.log(err);
