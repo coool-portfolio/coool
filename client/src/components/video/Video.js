@@ -1,6 +1,6 @@
 import React from "react";
 import './video.css'
-import KSwiss from '../../assets/images/project-images/kswiss.png'
+// import KSwiss from '../../assets/images/project-images/kswiss.png'
 
 function Video({ current, loading, modal, setModal }) {
     const handleClick = (e) => {
@@ -20,9 +20,9 @@ function Video({ current, loading, modal, setModal }) {
                     <>
                         {/* LOADING IMG */}
                         <img
-                            src={KSwiss}
+                            src={current.stillImg}
                             alt={current.title + " image"}
-                            className='video loading-still'
+                            className='vid-still loading-still'
                         />
                         {/* LOADING TEXT */}
                         {loading &&
