@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://coool-website.herokuapp.com/',
+      target: process.env.REACT_APP_DB_URL,
       changeOrigin: true,
     })
   )

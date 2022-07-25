@@ -36,6 +36,7 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 	const [showAnimation, setShowAnimation] = useState(true);
 	const [preview, setPreview] = useState(true);
 	const [change, setChange] = useState("");
+	const [pageWidth, setpageWidth] = useState(false);
 
 	// watches the size of window
 	useEffect(() => {
@@ -79,6 +80,12 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 			setLeft(false)
 		} else {
 			setRight(false)
+		}
+		//extra O's if page XXXL
+		if (window.innerWidth >= 1980) {
+			setpageWidth(true)
+		} else {
+			setpageWidth(false)
 		}
 	}
 
@@ -135,7 +142,7 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 			loadingImg: loadingImg
 		});
 
-		console.log(current)
+		// console.log(current)
 		// setting the current hovered on "O" to black
 		document.getElementById(preview).style.color = "black"
 
@@ -208,6 +215,7 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 							: <div className="loading-text">
 								{projectLinks === null ?
 									<>
+									{/* backup if database fails */}
 										{nav.map((o, i) => (
 											<div
 												onMouseEnter={() => handleChange(o.clip, o.title, o.link, o.img)}
@@ -221,7 +229,7 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 											</div>
 										))}
 										{/* Filler O's if screen is XXXL */}
-										{window.innerWidth >= 1980 && <div>OO</div>}
+										{pageWidth && <div>OO</div>}
 									</>
 									:
 									<>
@@ -238,7 +246,7 @@ function Toolbar({ current, setCurrent, location, setLocation, setLoading, setMo
 											</div>
 										))}
 										{/* Filler O's if screen is XXXL */}
-										{window.innerWidth >= 1980 && <div>OO</div>}
+										{pageWidth && <div>OO</div>}
 									</>
 								}
 							</div>

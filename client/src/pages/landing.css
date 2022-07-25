@@ -1,4 +1,4 @@
-footer {
+.landing-text {
     font-family: gtpressura;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ footer {
 
 /* MD/SM */
 @media only screen and (max-width: 768px) {
-    footer {
+    .landing-text {
         font-size: 18px;
         height: 80px;
         padding: 0 20px;

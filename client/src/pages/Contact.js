@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import "./contact.css";
+import { send } from 'emailjs-com';
 import ProfileImg from "../assets/images/coool_sitepics.png"
 
 function Contact() {
+	const SERVICE = process.env.REACT_APP_SERVICE;
+	const TEMPLATE = process.env.REACT_APP_TEMPLATE;
+	const API_KEY = process.env.REACT_APP_API_KEY;
+
 	const [toSend, setToSend] = useState({
 		name: '',
 		email: '',
@@ -32,129 +37,133 @@ function Contact() {
 		};
 	}
 
-	// const reset = () => setToSend({
-	// 	name: '',
-	// 	email: '',
-	// 	subject: '',
-	// 	message: '',
-	// });
+	const reset = () => setToSend({
+		name: '',
+		email: '',
+		subject: '',
+		message: '',
+	});
 
 	const sendEmail = (event) => {
 		event.preventDefault();
-		setAlert(true);
-		// send(
-		//     'gmail',
-		//     'template_5x49ssk',
-		//     toSend,
-		//     'H1n96WJh1ZD8qa-Wi'
-		// )
-		//     .then((response) => {
-		//         console.log('SUCCESS!', response.status, response.text);
-		//         setAlert(true)
-		//         reset();
-		//     })
-		//     .catch((err) => {
-		//         console.log('FAILED...', err);
-		//     });
+		send(
+			SERVICE,
+			TEMPLATE,
+			toSend,
+			API_KEY
+		)
+			.then((response) => {
+				console.log('SUCCESS!', response.status, response.text);
+				setAlert(true)
+				reset();
+			})
+			.catch((err) => {
+				console.log('FAILED...', err);
+			});
 	};
 
 	return (
-		<div className="container columns contact-page">
-			<div className="column is-two-fifths">
-				<figure className="image">
-					<img
-						className=""
-						alt="coool pic"
-						src={ProfileImg}
-						// src="https://user-images.githubusercontent.com/89707381/176979498-a7e2ad75-c04f-4f07-a8cf-a9f1f23da091.jpg"
-						 />
-				</figure>
-			</div>
-
-			<div className="form column is-three-fifths">
-				<h2 className="title is-2 header">For project inquires, please use the contact form below.</h2>
-
-				{/* NAME */}
-				<div className="field">
-					<div className="control">
-						<input
-							type="text"
-							id="name"
-							name="name"
-							value={toSend.name}
-							onChange={(event) => handleInput("name", event.target.value)}
-							className="input is-medium"
-							placeholder="NAME"
+		<div>
+			<div className="container columns contact-page">
+				<div className="column is-two-fifths">
+					<figure className="image">
+						<img
+							className=""
+							alt="coool pic"
+							src={ProfileImg}
 						/>
+					</figure>
+				</div>
+
+				<div className="form column is-three-fifths">
+					<h2 className="title is-2 header">For project inquires, please use the contact form below.</h2>
+
+					{/* NAME */}
+					<div className="field">
+						<div className="control">
+							<input
+								type="text"
+								id="name"
+								name="name"
+								value={toSend.name}
+								onChange={(event) => handleInput("name", event.target.value)}
+								className="input is-medium"
+								placeholder="NAME"
+							/>
+						</div>
 					</div>
-				</div>
 
-				{/* EMAIL */}
-				<div className="field">
-					<div className="control">
-						<input
-							type="email"
-							id="email"
-							name="email"
-							value={toSend.email}
-							onChange={(event) => handleInput("email", event.target.value)}
-							// className="input is-danger is-medium"
-							className={isInvalid ? "input is-danger is-medium" : "input is-medium"}
-							placeholder="EMAIL"
-						/>
+					{/* EMAIL */}
+					<div className="field">
+						<div className="control">
+							<input
+								type="email"
+								id="email"
+								name="email"
+								value={toSend.email}
+								onChange={(event) => handleInput("email", event.target.value)}
+								// className="input is-danger is-medium"
+								className={isInvalid ? "input is-danger is-medium" : "input is-medium"}
+								placeholder="EMAIL"
+							/>
+						</div>
+
+						{isInvalid && <p className="help email is-danger">This email is invalid</p>}
 					</div>
 
-					{isInvalid && <p className="help email is-danger">This email is invalid</p>}
-				</div>
-
-				{/* SUBJECT */}
-				<div className="field">
-					<div className="control">
-						<input
-							type="text"
-							id="subject"
-							value={toSend.subject}
-							onChange={(event) => handleInput("subject", event.target.value)}
-							className="input is-medium"
-							placeholder="SUBJECT" />
+					{/* SUBJECT */}
+					<div className="field">
+						<div className="control">
+							<input
+								type="text"
+								id="subject"
+								value={toSend.subject}
+								onChange={(event) => handleInput("subject", event.target.value)}
+								className="input is-medium"
+								placeholder="SUBJECT" />
+						</div>
 					</div>
-				</div>
 
-				{/* MESSAGE */}
-				<div className="field">
-					<div className="control">
-						<textarea
-							id="message"
-							name="message"
-							value={toSend.message}
-							onChange={(event) => handleInput("message", event.target.value)}
-							className="textarea is-medium"
-							placeholder="MESSAGE"></textarea>
+					{/* MESSAGE */}
+					<div className="field">
+						<div className="control">
+							<textarea
+								id="message"
+								name="message"
+								value={toSend.message}
+								onChange={(event) => handleInput("message", event.target.value)}
+								className="textarea is-medium"
+								placeholder="MESSAGE"></textarea>
+						</div>
 					</div>
-				</div>
 
-				{/* ALERT */}
-				{alert && <div className="notification is-success is-light alert">
-					<button
-						type="button"
-						onClick={(event) => setAlert(false, event.target.value)}
-						className="delete is-medium"></button>
-					<strong>Message sent!</strong>
-				</div>
-				}
-
-				{/* SUBMIT BTN */}
-				<div className="field is-grouped">
-					<div className="control">
+					{/* ALERT */}
+					{alert && <div className="notification is-success is-light alert">
 						<button
-							type="submit"
-							onClick={sendEmail}
-							className="button"
-						>
-							Submit
-						</button>
+							type="button"
+							onClick={(event) => setAlert(false, event.target.value)}
+							className="delete is-medium"></button>
+						<strong>Message sent!</strong>
+					</div>
+					}
+
+					{/* SUBMIT BTN */}
+					<div className="field is-grouped">
+						<div className="control">
+							<button
+								type="submit"
+								onClick={sendEmail}
+								className="button"
+							>
+								Submit
+							</button>
+						</div>
 					</div>
 				</div>
+
+			</div>
+			<div className="dev-credits">
+				<p className='credit'>Developers: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/briannaewoodruff/">Brianna Woodruff</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/iaerickson/">Ian Erickson</a></p>
 			</div>
 		</div>
 	)

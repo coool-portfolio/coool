@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 6;
+    z-index: 5;
 }
 
 .video-modal {
@@ -14,6 +14,16 @@
     animation: scale linear 0.5s;
 }
 
+.play-button {
+    z-index: 6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
 /* LOADING */
 .vid-still {
     position: absolute;
@@ -21,7 +31,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 6;
+    z-index: 0;
 }
 
 .loading-still {
@@ -37,8 +47,8 @@
     width: 100vw;
     z-index: 4;
     margin: 0;
-    top: 25vw;
-    font-size: 22px;
+    top: 22vw;
+    font-size: 25px;
     font-weight: bold;
     color: white;
     animation: wobble 2s both infinite;
@@ -74,14 +84,20 @@
     }
 }
 
-.play-button {
-    z-index: 6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+/* XL */
+@media only screen and (max-width: 1280px) {
+    .loading-animation {
+        top: 24vw;
+        font-size: 24px;
+    }
+}
+
+/* MD/SM */
+@media only screen and (max-width: 768px) {
+    .loading-animation {
+        top: 28vw;
+        font-size: 20px;
+    }
 }
 
     

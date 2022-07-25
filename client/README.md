@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+<div id="header" align="center">
+  <img src="https://user-images.githubusercontent.com/89707381/180673166-14db4d9e-6fa5-4c3b-9627-8ec3d26e2c19.png" width="100"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h1> Development Guide</h1>
+</div>
 
-## Available Scripts
+  ## Usage:
+  [Link to Pre-Deployed Website](https://coool-predeploy.herokuapp.com/)
 
-In the project directory, you can run:
+  ### **Front end:** 
+  Beware of `.env`, ask for details if needed.
+  <br />
+  Heroku is setup to automatically deploy changes from the GitHub's repository `main` branch
+  <br />
+  Heroku predeploy remote must be: `https://git.heroku.com/coool-predeploy.git`
 
-### `npm start`
+    git remote -v
+    heroku git:remote -a coool-predeploy
+ 
+  Double check `package.json` before pushing changes:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    package.json
+        "start": "npm run client",
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
+  ### **Back end:** 
+  Heroku predeploy remote must be: `https://git.heroku.com/coool-website.git`
+  
+    git remote -v
+    heroku git:remote -a coool-website
+ 
+  Double check `package.json` before pushing changes:
+  
+    package.json
+        "start": "node server.js",
 
-### `npm test`
+To update the database:
+1. adjust `seedDB.js`
+2. manually deploy new changes to Heroku only
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        git push heroku yourbranch:main
 
-### `npm run build`
+3. seed the cloud database
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        heroku run bash
+        npm run seed
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. check the database: <br />
+`https://coool-website.herokuapp.com/api/index` <br/>
+`https://coool-website.herokuapp.com/api/links`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Questions:
+*Full-Stack Developers*
+* <h3 style="display: inline; padding: 0 15px">Brianna Woodruff: </h3>
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/briannawoodruff">
+       <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" style="max-width: 100%;">
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/briannaewoodruff/">
+       <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" style="max-width: 100%;">
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/briannaewoodruff/">
+       <img src="https://img.shields.io/badge/Portfolio-EA4C89?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio" style="max-width: 100%;">
+    </a>
 
-### `npm run eject`
+    briannaewoodruff@gmail.com
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* <h3 style="display: inline; padding: 0 15px">Ian Erickson: </h3>
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/iaerickson">
+       <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" style="max-width: 100%;">
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/iaerickson/">
+       <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" style="max-width: 100%;">
+    </a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ierickson25@gmail.com
+<br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Graphic Designer*
+* <h3 style="display: inline; padding: 0 15px">Brian Hedrick: </h3>
+    <a target="_blank" rel="noopener noreferrer" href="https://brian-hedrick.com">
+       <img src="https://img.shields.io/badge/Website-purple?style=for-the-badge&logo=About.me&logoColor=white" alt="Website" style="max-width: 100%;">
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/pendingcontent?igshid=YmMyMTA2M2Y=">
+       <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" style="max-width: 100%;">
+    </a>
