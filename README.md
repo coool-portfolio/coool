@@ -27,7 +27,7 @@
 
 ## Technologies Used
  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge" style="max-width: 100%;">
- <img src="	https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku Badge" style="max-width: 100%;">
+ <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku Badge" style="max-width: 100%;">
  <a target="_blank" rel="noopener noreferrer" href="https://www.mongaodb.com/atlas/database">
     <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Atlas" style="max-width: 100%;">
  </a>
@@ -64,7 +64,6 @@
     </a>
 
     briannaewoodruff@gmail.com
-<br />
 
 * <h3 style="display: inline; padding: 0 15px">Ian Erickson: </h3>
     <a target="_blank" rel="noopener noreferrer" href="https://github.com/iaerickson">
