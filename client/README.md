@@ -63,7 +63,6 @@ To update the database:
     </a>
 
     briannaewoodruff@gmail.com
-<br />
 
 * <h3 style="display: inline; padding: 0 15px">Ian Erickson: </h3>
     <a target="_blank" rel="noopener noreferrer" href="https://github.com/iaerickson">
