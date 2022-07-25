@@ -9,6 +9,7 @@ h2 {
 
 .container {
    width: 100vw;
+   height: auto;
 }
 
 .contact-page {
@@ -56,12 +57,37 @@ h2 {
 
 figure.image img {
     margin: 0;
+    cursor: default;
 }
 
 div.form.column {
     padding-left: 50px;
     margin: 0;
     width: 55vw;
+}
+
+.dev-credits {
+    font-family: gtpressura;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(-10px);
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.credit {
+    padding: 0 35px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.credit a {
+    color: seagreen;
+}
+.credit a:hover {
+    color: lightseagreen;
 }
 
 /* XL */

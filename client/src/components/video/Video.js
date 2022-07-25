@@ -1,13 +1,13 @@
 import React from "react";
 import './video.css'
 
-function Video({ current, modal, setModal }) {
+function Video({ current, loading, modal, setModal }) {
     const handleClick = (e) => {
         e.preventDefault()
 
         setModal(true)
     }
-    
+
     return (
         <>
             <div className="click-container">
@@ -16,7 +16,22 @@ function Video({ current, modal, setModal }) {
                 }
 
                 {current &&
-                    <iframe preload="metadata" id="video" className="video clip" title={current.title} src={current.preview + '&autoplay=1&loop=1&background=1'} allow="autoplay; fullscreen" frameBorder={0} ></iframe>
+                    <>
+                        {/* LOADING IMG */}
+                        <img
+                            src={current.loadingImg}
+                            alt={current.title + " image"}
+                            className='vid-still loading-still'
+                        />
+                        {/* LOADING TEXT */}
+                        {loading &&
+                            <div className="loading-animation">
+                                <div className="letter">Loooading</div>
+                            </div>
+                        }
+                        {/* CLIP */}
+                        <iframe preload="metadata" id="video" className="video clip" title={current.title} src={current.preview + '&autoplay=1&loop=1&background=1'} allow="autoplay; fullscreen" frameBorder={0} ></iframe>
+                    </>
                 }
             </div>
         </>

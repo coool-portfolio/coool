@@ -18,7 +18,7 @@ function IndexCard({ projects }) {
 
 	// watches scrolling
 	window.onscroll = function () {
-		console.log(window.pageYOffset)
+		// console.log(window.pageYOffset)
 		// add 5 more project when scrolled down to 5
 		if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
 			setTimeout(() => {

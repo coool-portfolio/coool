@@ -1,4 +1,4 @@
-footer {
+.landing-text {
     font-family: gtpressura;
     display: flex;
     justify-content: center;
@@ -30,33 +30,9 @@ footer {
     padding: 56.25% 0 0 0;
 }
 
-/* LOADING */
-.loading-animation {
-    font-family: gtpressura;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    z-index: 1;
-    margin: 0;
-    bottom: 450px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.letter {
-    display: inline;
-}
-
-.loading-o {
-    width: 4.95rem;
-    margin: 0;
-}
-
 /* MD/SM */
 @media only screen and (max-width: 768px) {
-    footer {
+    .landing-text {
         font-size: 18px;
         height: 80px;
         padding: 0 20px;

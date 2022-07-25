@@ -20,6 +20,8 @@ const projectSeed = [
 			"https://player.vimeo.com/video/589106246?h=188fd4f2fb&title=0&byline=0&portrait=0&autoplay=1&loop=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978111-a9e4ae2c-df98-440a-920d-d479c5ac67e0.jpg",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664882-9c773577-fba9-439d-b233-e4606b7c1d9a.png",
 		notes: "",
 	},
 	{
@@ -33,6 +35,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=pSCPdO7Yxfc",
 		stillImg:
 			"https://drive.google.com/file/d/113Vp9nXgwx1L84NnzYvw0y7tazE5X3Rj/view",
+		loadingImg:
+			"",
 		notes: "not yet released",
 	},
 	{
@@ -46,6 +50,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=pSCPdO7Yxfc",
 		stillImg:
 			"https://drive.google.com/file/d/113Vp9nXgwx1L84NnzYvw0y7tazE5X3Rj/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -60,6 +66,8 @@ const projectSeed = [
 			"https://player.vimeo.com/video/546246624?h=396eb1378e&title=0&byline=0&portrait=0&autoplay=1&loop=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978152-3b05a0b7-cf52-4f7c-8a8a-48f6d70c57a3.jpeg",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664887-5c643de2-5423-46a6-b4fc-1aa5546e9eb0.png",
 		notes: "",
 	},
 	{
@@ -73,6 +81,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=ajVAcqo6SpA&t=31s",
 		stillImg:
 			"https://drive.google.com/file/d/1hSrRsZPSeTceMwv3jk_fEK6HgZohlmFU/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -86,6 +96,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=FX5XiGWQtiU",
 		stillImg:
 			"https://drive.google.com/file/d/1HxCZEXQ8VdPiNvaP47piCFHkugFfoZ2g/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -99,6 +111,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/7EIyD_lQaXU?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978361-95a4ba44-6e16-41c5-a15a-a3beaf3c4144.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664892-cfb64262-2c0c-4eb6-bada-518f7ae38c4f.png",
 		notes: "",
 	},
 	{
@@ -112,6 +126,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=c-K2hAQNmss",
 		stillImg:
 			"https://drive.google.com/file/d/10ns_gP5FODAIu4-41EHbmFo1rZ28Ovi-/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -125,6 +141,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=tA0h8ypYb8M",
 		stillImg:
 			"https://drive.google.com/file/d/1vo4_ULppklVirUAdFsPczssstWM1reYM/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -138,6 +156,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/B2nXcWyBYdE?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978248-6f8f8008-10e9-4fdc-9af0-500b9f8d1643.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664894-3b5078d8-c3de-42f2-8357-345daff81a89.png",
 		notes: "",
 	},
 
@@ -152,6 +172,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/PchaMpnIhBU?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978291-164c05d2-684a-4f68-942e-ee8dc42408be.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664900-7963b789-5740-42c5-a92a-e1c8506bd8b5.png",
 		notes: "",
 	},
 	{
@@ -165,6 +187,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/GARXqyRfFcY?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978398-184bc131-89b6-4326-aae8-bfadac975a66.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664910-17c3268a-5b4b-483f-9118-4f31ab6af5e6.png",
 		notes: "",
 	},
 	{
@@ -178,6 +202,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=EeTcmm_tq7U",
 		stillImg:
 			"https://drive.google.com/file/d/1t7q-CSV96elMMWbVqqn3iO9Bo7ufRlf1/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -191,6 +217,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/bHHHbpQnd-4?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978470-110c15c0-bee7-400b-b231-2b6393f3c211.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664912-d051e0f1-56c4-46c9-8181-63542efbb1ea.png",
 		notes: "",
 	},
 	{
@@ -204,6 +232,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/U00fIl_ArHQ?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978477-31abe61b-0498-4ca3-bd52-1f60e8156064.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664914-e23d92b0-9d60-41af-bb3d-9f1be6e3824c.png",
 		notes: "",
 	},
 	{
@@ -217,6 +247,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/VRiENpklOO4?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978490-463f0a23-f9f3-4915-acdf-bf6d1cdb6b0d.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664919-8f8b2da2-2c6e-4a66-8a90-70c842b3e873.png",
 		notes: "",
 	},
 	{
@@ -230,6 +262,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/6109rocRH-Q?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978516-025d1c48-25fc-4ed8-8492-72accc1682b8.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664924-d13ddc36-4d05-42a0-b35e-8fc575ae33a4.png",
 		notes: "",
 	},
 	{
@@ -243,6 +277,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=RAS2OCzOjUo",
 		stillImg:
 			"https://drive.google.com/file/d/1y6R_4EP8zy9aHAr8_HCroY-t8GK-zloU/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -256,6 +292,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/kq2QPimzQRw?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978583-fe5503bd-0703-46bb-a5de-c729c1f27b16.jpg",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664936-e651a08b-26be-4065-ba58-437286c6b9a0.png",
 		notes: "",
 	},
 	{
@@ -269,6 +307,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=YGhLl_61Pzs",
 		stillImg:
 			"https://drive.google.com/file/d/1V5dbAtRKRhhLmJq2LsV0HCX8cTZKrzwn/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -282,6 +322,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=nqY0H3lsrEs",
 		stillImg:
 			"https://drive.google.com/file/d/1pXAdA0CjrtPCgZ3X7zoLtCTWSPQL6dyn/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -295,6 +337,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/_Xv1JByUZ9E?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978616-3e3edd3a-9959-4997-9a00-aaac333bff8d.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664942-10e731b4-b52b-4598-854c-125c6b2a2f25.png",
 		notes: "",
 	},
 
@@ -309,6 +353,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/SGtD82ExtAQ?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978645-9565864a-a4f8-4e01-aa64-c6b0605a14ba.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664946-940cbe2f-46a4-49e8-8fa0-cce74f754c0d.png",
 		notes: "",
 	},
 	{
@@ -322,6 +368,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=XzsuFBRDFhM&feature=youtu.be",
 		stillImg:
 			"https://drive.google.com/file/d/1GmL7gKw8gCp9dTJ_AFXNpNz5-9OAjl73/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -335,6 +383,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/uqDNufv66Wg?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978670-96a356ba-28e0-4927-a5fd-e32838cf9b4c.jpeg",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664948-5f7c5655-b1a2-4ea0-914a-4e1ac29920e0.png",
 		notes: "",
 	},
 	{
@@ -348,6 +398,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=KTTRFhZNaVE",
 		stillImg:
 			"https://drive.google.com/file/d/105C097FgzrNMHJbq5qxmtiOXMMR1rscK/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -361,6 +413,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/JdQl53qwSAc?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978688-527a8256-a4d0-4a22-bc0c-c86ef04923dd.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664954-89a24d89-b034-4ce8-8222-b3090d0a147d.png",
 		notes: "",
 	},
 	{
@@ -374,6 +428,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/embed/tZFUcZTyqD4?autoplay=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978784-17f0fcaa-fa95-4725-99df-a0c18ac0b529.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664962-c36cb625-86ed-4a93-9583-47852ffc8204.png",
 		notes: "",
 	},
 	{
@@ -387,6 +443,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=yINLTWJqhZo",
 		stillImg:
 			"https://drive.google.com/file/d/1tE79FQJO2vQ44IuvpoI--wmzwMt68n3C/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -399,6 +457,8 @@ const projectSeed = [
 		fullVideo: "https://vimeo.com/363653604",
 		stillImg:
 			"https://drive.google.com/file/d/1Ol-9i7E_9f1ylT_DZaPACYb4shj1t16u/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -413,6 +473,8 @@ const projectSeed = [
 			"https://player.vimeo.com/video/362910525?h=9b4df0fbf9&title=0&byline=0&portrait=0&autoplay=1&loop=1",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176978822-c9f29f62-1637-4d64-baba-ab797c65abe0.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664967-61d5ed5c-a938-4509-a324-947d036fd41e.png",
 		notes: "",
 	},
 	{
@@ -426,6 +488,8 @@ const projectSeed = [
 			"https://player.vimeo.com/video/285129219?h=30852f60df&autoplay=1&loop=1&color=ffffff&portrait=0",
 		stillImg:
 			"https://user-images.githubusercontent.com/89707381/176979381-c02cb638-3ee3-4464-9bdb-e3c56975c1db.png",
+		loadingImg:
+			"https://user-images.githubusercontent.com/89707381/180664971-acc825e7-620b-46fc-9b78-9aa8407ab31a.png",
 		notes: "",
 	},
 	{
@@ -439,6 +503,8 @@ const projectSeed = [
 		fullVideo: "https://www.youtube.com/watch?v=npqsHq-m6ww",
 		stillImg:
 			"https://drive.google.com/file/d/1C2YHXby8s0o36fosAUrBMAVz1rcpKOFn/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -452,6 +518,8 @@ const projectSeed = [
 		fullVideo: "https://vimeo.com/362910551",
 		stillImg:
 			"https://drive.google.com/file/d/1e6BiJmUvcvKRGrcGrJywPeDA2H53VCku/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	{
@@ -465,6 +533,8 @@ const projectSeed = [
 		fullVideo: "https://vimeo.com/362909701",
 		stillImg:
 			"https://drive.google.com/file/d/180mkTlV2-8Lz7BNfCc84cA4qe8umTaAK/view",
+		loadingImg:
+			"",
 		notes: "",
 	},
 	// {
@@ -476,6 +546,7 @@ const projectSeed = [
 	// 	preview: "",
 	// 	fullVideo: "",
 	// 	stillImg: "",
+	//  loadingImg: "",
 	// 	notes: "",
 	// },
 ];

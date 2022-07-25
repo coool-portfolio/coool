@@ -7,13 +7,7 @@ export default function Landing({ current, loading, modal, setModal }) {
 	return (
 		<div>
 			{!current &&
-				<footer>
-					COOOL is a joint directing project between Jake Nokovic and John Tereick.
-				</footer>
-			}
-			{/* MOBILE FRIENDLY FOOTER STAYS */}
-			{window.innerWidth <= 768 &&
-				<footer>
+				<footer className="landing-text">
 					COOOL is a joint directing project between Jake Nokovic and John Tereick.
 				</footer>
 			}
@@ -21,15 +15,8 @@ export default function Landing({ current, loading, modal, setModal }) {
 			{/* VIDEO PLAYER */}
 			<div className="preview">
 				<VideoModal current={current} modal={modal} />
-				<Video current={current} modal={modal} setModal={setModal}/>
+				<Video current={current} loading={loading} modal={modal} setModal={setModal} />
 			</div>
-
-			{/* LOADING ALERT */}
-			{loading &&
-				<div className="loading-animation">
-					<div className="letter">Loooading</div>
-				</div>
-			}
 		</div>
 	);
 }
