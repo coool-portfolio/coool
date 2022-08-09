@@ -36,7 +36,7 @@ function IndexCardCol({ project }) {
 			<div className='is-2 cardCol column'>
 				<div className='project'>
 					<h5>Client</h5>
-					<h2>{client}</h2>
+					<h2 className="client">{client}</h2>
 				</div>
 
 				<div className='info'>

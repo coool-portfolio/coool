@@ -1,14 +1,3 @@
-@font-face {
-  font-family: avantregular;
-  src: url(./assets/fonts/AvantRegular.ttf) format('truetype');
-  
-}
-
-@font-face {
-  font-family: gtpressura;
-  src: url(./assets/fonts/GTPressuraMonoLightLight.ttf) format('truetype');
-}
-
 .App {
   text-align: center;
 }

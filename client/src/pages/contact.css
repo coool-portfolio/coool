@@ -1,10 +1,17 @@
 .header {
     width: 60%;
+    margin-bottom: 30px;
 }
 
 h2 {
     font-family: avantregular;
-    text-shadow: 0px 0px 0.5px black;
+}
+
+.form h3 {
+    font-size: 47px;
+    color: rgb(46, 46, 46);
+    line-height: 2.75rem;
+    font-family: avantregular;
 }
 
 .container {
@@ -71,14 +78,14 @@ div.form.column {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    transform: translateY(-10px);
-    bottom: 0;
+    /* transform: translateY(-25px); */
+    bottom: 25px;
     padding: 0;
     margin: 0;
 }
 
 .credit {
-    padding: 0 35px;
+    padding: 0 30px 0 10px;
     font-size: 16px;
     text-align: center;
 }
@@ -129,6 +136,10 @@ div.form.column {
         margin: 0 10px 0 10px;
     }
 
+    h3 {
+        margin-top: 15px;
+    }
+
     .image {
         transform: scale(0.90);
     }
@@ -148,5 +159,9 @@ div.form.column {
 
     div.field, div.notification {
         width: 90vw;
+    }
+
+    .dev-credits {
+        bottom: 10px;
     }
 }

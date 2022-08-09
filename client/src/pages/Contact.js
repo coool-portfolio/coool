@@ -76,7 +76,7 @@ function Contact() {
 				</div>
 
 				<div className="form column is-three-fifths">
-					<h2 className="title is-2 header">For project inquires, please use the contact form below.</h2>
+					<h3 className="is-2 header">For project inquires, please use the contact form below.</h3>
 
 					{/* NAME */}
 					<div className="field">
@@ -164,6 +164,7 @@ function Contact() {
 			</div>
 			<div className="dev-credits">
 				<p className='credit'>Developers: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/briannaewoodruff/">Brianna Woodruff</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/iaerickson/">Ian Erickson</a></p>
+				<p className='credit'>Designer: <a target="_blank" rel="noopener noreferrer" href="https://brian-hedrick.com/">Brian Hedrick</a></p>
 			</div>
 		</div>
 	)

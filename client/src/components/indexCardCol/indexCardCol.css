@@ -25,10 +25,14 @@
 h2 {
 	width: 100%;
 	display: block;
-	font-size: 2.35vw;
-	font-weight: 600;
+	/* font-size: 2.35vw; */
+	font-size: 2.75vw;
+	padding: 0;
+	margin: 0;
+	/* font-weight: 600; */
 	color: black;
-	letter-spacing: 0.07rem;
+	letter-spacing: -0.05rem;
+	line-height: 3.85rem;
 }
 
 h5 {
@@ -108,8 +112,14 @@ iframe {
 	}
 
 	h2 {
-		font-size: 28px;
-		margin: 10px 0 20px 0;
+		font-size: 35px;
+		margin: 10px 20px 20px 0;
+		padding: 0;
+		line-height: normal;
+	}
+
+	.info p {
+		padding: 2px 18px 5px 18px;
 	}
 
 	.cardCol {
@@ -117,7 +127,7 @@ iframe {
 	}
 
 	figure.image.column {
-		margin-left: 20px;
+		margin-left: 15px;
 		padding: 0;
 		margin-bottom: 10px;
 	}
