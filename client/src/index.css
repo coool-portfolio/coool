@@ -1,8 +1,22 @@
+@font-face {
+  font-family: avantregular;
+  /* src: url(./assets/fonts/Avantt-Regular.otf) format('opentype'); */
+  src: url(./assets/fonts/Avantt-Regular.ttf) format('truetype');
+  /* src: url(./assets/fonts/AvantRegular.ttf) format('truetype'); */
+  
+}
+
+@font-face {
+  font-family: gtpressura;
+  src: url(./assets/fonts/GTPressuraMonoLightLight.ttf) format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, avantregular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
