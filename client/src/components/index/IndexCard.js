@@ -3,10 +3,11 @@ import IndexCardCol from "../indexCardCol/IndexCardCol";
 import "./indexCard.css";
 
 function IndexCard({ projects }) {
+	const [allProjects, setAllProjects] = useState(projects);
 	const [index, setIndex] = useState(5);
 	const [showDownBtn, setshowDownBtn] = useState(true);
 	const [toEndBtn, setToEndBtn] = useState(false);
-	
+
 	// if page refreshes, reset page scrolled to top
 	useEffect(() => {
 		setIndex(5)
@@ -15,10 +16,13 @@ function IndexCard({ projects }) {
 		}
 		setshowDownBtn(true)
 	}, [])
+	// sets projects
+	useEffect(() => {
+		setAllProjects(projects)
+	}, [projects])
 
 	// watches scrolling
 	window.onscroll = function () {
-		// console.log(window.pageYOffset)
 		// add 5 more project when scrolled down to 5
 		if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
 			setTimeout(() => {
@@ -30,24 +34,16 @@ function IndexCard({ projects }) {
 			setIndex(5)
 		}
 		// showing JUMP TO TOP BTN
-		if (index >= 17) {
+		if (index >= allProjects.length && (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 700) {
 			setshowDownBtn(false)
+		} else {
+			setshowDownBtn(true)
 		}
 		// showing JUMP TO END BTN 
-		// for mobile
-		if (window.innerWidth <= 768) {
-			if (window.pageYOffset > 1200 && window.pageYOffset < 18500) {
-				setToEndBtn(true)
-			} else {
-				setToEndBtn(false)
-			}
+		if (index > 5) {
+			setToEndBtn(true)
 		} else {
-			// for desktop
-			if (window.pageYOffset > 1200 && window.pageYOffset < 8000) {
-				setToEndBtn(true)
-			} else {
-				setToEndBtn(false)
-			}
+			setToEndBtn(false)
 		}
 	};
 
@@ -64,28 +60,36 @@ function IndexCard({ projects }) {
 		event.preventDefault()
 		// resets page
 		setIndex(5)
-		window.scrollTo(0, 0);
-		setshowDownBtn(true)
+		setTimeout(() => {
+			// scrolling to top of page
+			window.scrollTo(0, 0);
+			// hiding JUMP TO TOP BTN
+			setshowDownBtn(true)
+		}, 500)
 	}
 	// scrolls to END
 	function scrollEnd(event) {
 		event.preventDefault()
+		// shows all projects
+		setIndex(allProjects.length)
 		setTimeout(() => {
-			// shows all projects
-			setIndex(projects.length)
 			// scrolling to bottom of page
 			window.scrollTo(0, document.body.scrollHeight);
 			// showing JUMP TO TOP BTN
 			setshowDownBtn(false)
-		}, 250)
+		}, 500)
+	}
+	// random key for unique key error
+	function getRandomKey() {
+		return Math.random().toString(36).replace('0.', Date.now()).slice(10, 25)
 	}
 
 	return (
 		<div className='index columns is-desktop'>
 			<>
 				{/* filters and maps based on index */}
-				{projects.filter((credit, i) => i <= index).map((project, i) => (
-					<IndexCardCol key={Math.floor(Math.random() * 1000)} project={project} />
+				{allProjects.filter((credit, i) => i <= index).map((projects) => (
+					<IndexCardCol key={getRandomKey()} project={projects} getRandomKey={getRandomKey} />
 				))}
 			</>
 

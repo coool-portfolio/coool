@@ -25,11 +25,9 @@
 h2 {
 	width: 100%;
 	display: block;
-	/* font-size: 2.35vw; */
 	font-size: 2.75vw;
 	padding: 0;
 	margin: 0;
-	/* font-weight: 600; */
 	color: black;
 	letter-spacing: -0.05rem;
 	line-height: 3.85rem;
@@ -75,6 +73,10 @@ img {
 	cursor: pointer;
 	margin-bottom: 20px;
 	padding: 0;
+}
+
+figure.image img {
+	cursor: pointer;
 }
 
 iframe {

@@ -9,8 +9,6 @@
 /* COOOL ANIMATION */
 .coool {
     font-family: avantregular;
-    /* text-shadow: 0px 1px, 1px 0px, 1px 0px; */
-    /* font-weight: 900; */
     font-size: 117.5px;
     width: 100%;
     margin: 0;
@@ -18,21 +16,16 @@
     letter-spacing: -0.285rem;
     color: black;
     animation: expand 3s linear -0.07s forwards;
-    /* padding: 0 30px; */
     padding: 0 35px 0 30px;
 }
 
 .no-animation-coool {
     font-family: avantregular;
-    /* text-shadow: 0px 1px, 1px 0px, 1px 0px; */
-    /* font-weight: 900; */
-    /* font-size: 100px; */
     font-size: 117.5px;
     width: 100%;
     margin: 0;
     line-height: 1.195em;
     letter-spacing: -0.285rem;
-    /* line-height: 1.4em; */
     color: black;
 }
 
@@ -54,14 +47,17 @@ div {
     scroll-behavior: smooth;
 }
 
-.each-o {
-    cursor: pointer;
-}
-
-::-webkit-scrollbar {
+.loading-text::-webkit-scrollbar {
     width: 0; 
     height: 0;
+}
+
+.loading-text::-webkit-scrollbar-thumb {
     background: transparent; 
+}
+
+.each-o {
+    cursor: pointer;
 }
 
 /* RIGHT AND LEFT BUTTONS */
@@ -100,7 +96,6 @@ button {
 
 .arrow svg {
     margin: 0;
-    /* background-color: rgba(0, 0, 0, 0.123); */
     background-color: transparent;
     border-radius: 2px;
     animation: arrow-horizontal 1s both infinite;

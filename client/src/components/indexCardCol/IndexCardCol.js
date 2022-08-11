@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./indexCardCol.css";
 
-function IndexCardCol({ project }) {
+function IndexCardCol({ project, getRandomKey }) {
 	const [showVideo, setShowVideo] = useState(false);
 	// returns first half of client
 	const client = project.client.split("\n").shift()
@@ -24,10 +24,6 @@ function IndexCardCol({ project }) {
 		} else {
 			creditCol3Arr.push(creditArray[i])
 		}
-	}
-	// random key for unique key error
-	function getRandomKey() {
-		return Math.random().toString(36).replace('0.',Date.now()).slice(10,25)
 	}
 
 	return (

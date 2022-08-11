@@ -13,10 +13,12 @@ export default function Landing({ current, loading, modal, setModal }) {
 			}
 
 			{/* VIDEO PLAYER */}
-			<div className="preview">
-				<VideoModal current={current} modal={modal} />
-				<Video current={current} loading={loading} modal={modal} setModal={setModal} />
-			</div>
+			{current &&
+				<div className="preview">
+					<VideoModal current={current} modal={modal} />
+					<Video current={current} loading={loading} modal={modal} setModal={setModal} />
+				</div>
+			}
 		</div>
 	);
 }
