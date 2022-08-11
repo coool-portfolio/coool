@@ -2,10 +2,9 @@
 	"name": "coool-server",
 	"version": "1.0.0",
 	"description": "",
-	"proxy": "http://localhost:3001",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node server.js",
+		"start": "npm run client",
 		"start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
 		"client": "cd client && npm run start",
 		"install": "cd client && npm install",
