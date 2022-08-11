@@ -75,7 +75,7 @@ To update the database:
     ierickson25@gmail.com
 <br />
 
-*Graphic Designer*
+*Creative Director*
 * <h3 style="display: inline; padding: 0 15px">Brian Hedrick: </h3>
     <a target="_blank" rel="noopener noreferrer" href="https://brian-hedrick.com">
        <img src="https://img.shields.io/badge/Website-purple?style=for-the-badge&logo=About.me&logoColor=white" alt="Website" style="max-width: 100%;">

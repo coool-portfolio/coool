@@ -164,7 +164,7 @@ function Contact() {
 			</div>
 			<div className="dev-credits">
 				<p className='credit'>Developers: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/briannaewoodruff/">Brianna Woodruff</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/iaerickson/">Ian Erickson</a></p>
-				<p className='credit'>Designer: <a target="_blank" rel="noopener noreferrer" href="https://brian-hedrick.com/">Brian Hedrick</a></p>
+				<p className='credit'>Creative Director: <a target="_blank" rel="noopener noreferrer" href="https://brian-hedrick.com/">Brian Hedrick</a></p>
 			</div>
 		</div>
 	)

@@ -78,7 +78,6 @@ div.form.column {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    /* transform: translateY(-25px); */
     bottom: 25px;
     padding: 0;
     margin: 0;
@@ -126,6 +125,7 @@ div.form.column {
     .header {
         width: 100%;
         text-align: center;
+        padding: 0 15px;
     }
     
     .contact-page {
@@ -163,5 +163,9 @@ div.form.column {
 
     .dev-credits {
         bottom: 10px;
+    }
+
+    .field.is-grouped {
+        justify-content: center;
     }
 }

@@ -26,8 +26,12 @@
   * [Team](#team)
 
 ## Technologies Used
- <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge" style="max-width: 100%;">
- <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku Badge" style="max-width: 100%;">
+ <a target="_blank" rel="noopener noreferrer" href="https://reactjs.org/">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge" style="max-width: 100%;">
+ </a>
+ <a target="_blank" rel="noopener noreferrer" href="https://www.heroku.com">
+    <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku Badge" style="max-width: 100%;">
+ </a>
  <a target="_blank" rel="noopener noreferrer" href="https://www.mongaodb.com/atlas/database">
     <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Atlas" style="max-width: 100%;">
  </a>
@@ -40,14 +44,14 @@
 
 ## Stills:
 ### Landing
-![Landing Page](https://user-images.githubusercontent.com/89707381/180694587-d80f8db7-5002-4e0e-9f1f-33ac9c586aae.jpg)
+![Landing Page](https://user-images.githubusercontent.com/89707381/184061923-ad90a960-8bf3-4409-8ec2-e864c3594c2f.jpg)
 <br />
 
-![Projects](https://user-images.githubusercontent.com/89707381/180694599-707d9588-f53f-4297-b7ed-f0b4ce83b643.jpg)
+![Projects](https://user-images.githubusercontent.com/89707381/184061934-99bfba87-cc8f-4ecb-88ad-8a5f500807cf.jpg)
 ### Index
-![Index Page](https://user-images.githubusercontent.com/89707381/180694604-e715ed9a-ad87-4bfa-85b9-d0eb08f8955e.jpg)
+![Index Page](https://user-images.githubusercontent.com/89707381/184061941-36c8bee3-789a-42dd-b8df-6fd97508fbeb.jpg)
 ### Contact
-![Contact Page](https://user-images.githubusercontent.com/89707381/180694751-0ba06252-053d-40a7-870b-41bee681c955.jpg)
+![Contact Page](https://user-images.githubusercontent.com/89707381/184061942-2ff589c9-f8eb-46d6-93d3-d8caadafa15a.jpg)
 
 
 ## Team:
@@ -76,7 +80,7 @@
     ierickson25@gmail.com
 <br />
 
-*Graphic Designer*
+*Creative Director*
 * <h3 style="display: inline; padding: 0 15px">Brian Hedrick: </h3>
     <a target="_blank" rel="noopener noreferrer" href="https://brian-hedrick.com">
        <img src="https://img.shields.io/badge/Website-purple?style=for-the-badge&logo=About.me&logoColor=white" alt="Website" style="max-width: 100%;">

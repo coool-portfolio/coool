@@ -3,7 +3,7 @@ const Project = require("../models/project");
 module.exports = {
 	// get all projects
 	getProjects(req, res) {
-		Project.find({ mainPageActive: true })
+		Project.find()
 			.then((projects) => res.json(projects))
 			.catch((err) => {
 				console.log(err);
