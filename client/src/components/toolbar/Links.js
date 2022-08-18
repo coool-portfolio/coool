@@ -6,6 +6,15 @@ import { NavLink } from 'react-router-dom'
 function Links({ preview, setPreview, current, setCurrent, location, setLocation }) {
     const [delay, setDelay] = useState(false);
 
+    // watches the size of window
+    useEffect(() => {
+        window.addEventListener('resize', handleWidth)
+    });
+
+    useEffect(() => {
+        handleWidth()
+    }, [current])
+
     useEffect(() => {
         // if page reload
         if (window.location.pathname === "/" || location === "/") {
@@ -22,43 +31,44 @@ function Links({ preview, setPreview, current, setCurrent, location, setLocation
 
     // links appear after a beat
     useEffect(() => {
-        // let index = document.getElementById("index")
-        // let contact = document.getElementById("contact")
         let links = document.querySelector(".links")
         let toolbar = document.querySelector(".toolbar")
 
         if (window.location.pathname === '/') {
             // making the index and contact links disappear and reappear
-            // index.style.display = "none"
-            // contact.style.display = "none"
             links.style.display = "none"
-            // setTimeout(() => {
-                // index.style.display = "flex"
-                // contact.style.display = "flex"
-                // links.style.justifyContent = "space-between"
-            // }, 2700)
             // delays showing links
             setTimeout(() => {
                 links.style.display = "flex"
             }, 1000)
-    
-            // adjusting "Preview" linksing when links are added
-            // links.style.justifyContent = "links"
-            // setTimeout(() => {
-            //     let prevContainer = document.getElementById("prev")
-            //     prevContainer.style.marginRight = "32.5px"
-            // }, 1000)
-            // setTimeout(() => {
-            //     let prevContainer = document.getElementById("prev")
-            //     prevContainer.style.marginRight = "0"
-            // }, 2700)
+
         } else {
-            // links.style.justifyContent = "space-between"
             links.style.animation = "none"
             toolbar.style.animation = "none"
         }
     }, [])
- 
+
+    // adjusting the font size of Nav Titles so they don't overlap with the video
+    function handleWidth() {
+        let pContainer = document.querySelector(".p-container")
+        if (window.innerWidth <= 768) {
+            if (pContainer !== null) {
+                let textP = pContainer.innerText
+                if (textP !== null && textP !== "Preview") {
+                    if (textP.length >= 33) {
+                        pContainer.style.fontSize = "19px"
+                    } else {
+                        pContainer.style.fontSize = "24px"
+                    }
+                }
+            }
+        } else {
+            if (pContainer !== null) {
+                pContainer.style.fontSize = "30px"
+            }
+        }
+    }
+
     // removes landing "Preview" if not on landing
     function removePreviewIndex() {
         setLocation('/index')
@@ -95,7 +105,14 @@ function Links({ preview, setPreview, current, setCurrent, location, setLocation
                         }
                         {/* PROJECT NAME */}
                         {current &&
-                            <p className="p-container">{current.title}</p>
+                            <>
+                                {current.title === current.client
+                                    ?
+                                    <p className="p-container">{current.title}</p>
+                                    :
+                                    <p className="p-container">{current.client.split("\n").shift()} / {current.title}</p>
+                                }
+                            </>
                         }
                     </div>
                 }
