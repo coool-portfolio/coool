@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 function Links({ preview, setPreview, current, setCurrent, location, setLocation }) {
     const [delay, setDelay] = useState(false);
+    // console.log(current)
 
     useEffect(() => {
         // if page reload
@@ -33,15 +34,15 @@ function Links({ preview, setPreview, current, setCurrent, location, setLocation
             // contact.style.display = "none"
             links.style.display = "none"
             // setTimeout(() => {
-                // index.style.display = "flex"
-                // contact.style.display = "flex"
-                // links.style.justifyContent = "space-between"
+            // index.style.display = "flex"
+            // contact.style.display = "flex"
+            // links.style.justifyContent = "space-between"
             // }, 2700)
             // delays showing links
             setTimeout(() => {
                 links.style.display = "flex"
             }, 1000)
-    
+
             // adjusting "Preview" linksing when links are added
             // links.style.justifyContent = "links"
             // setTimeout(() => {
@@ -58,7 +59,7 @@ function Links({ preview, setPreview, current, setCurrent, location, setLocation
             toolbar.style.animation = "none"
         }
     }, [])
- 
+
     // removes landing "Preview" if not on landing
     function removePreviewIndex() {
         setLocation('/index')
@@ -95,7 +96,14 @@ function Links({ preview, setPreview, current, setCurrent, location, setLocation
                         }
                         {/* PROJECT NAME */}
                         {current &&
-                            <p className="p-container">{current.title}</p>
+                            <>
+                                {current.title === current.client
+                                    ?
+                                    <p className="p-container">{current.title}</p>
+                                    :
+                                    <p className="p-container">{current.client} / {current.title}</p>
+                                }
+                            </>
                         }
                     </div>
                 }
