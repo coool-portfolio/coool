@@ -145,7 +145,7 @@ hr {
     font-family: gtpressura;
     font-weight: 500;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     animation: fadeIn ease 2s;
     justify-content: space-between;
@@ -194,6 +194,7 @@ p {
 
 .p-container {
     padding: 20px 15px;
+    text-align: center;
 }
 
 .preview-container {
