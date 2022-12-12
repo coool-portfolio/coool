@@ -15,7 +15,7 @@
 </div>
 
   ## Description:
-  [Link to Pre-Deployed Website](https://coool-predeploy.herokuapp.com/)
+  [Link to Deployed Website](https://www.itscoool.com)
 
   A responsive and mobile friendly application showcasing video projects with an interactive and engaging design.
 
